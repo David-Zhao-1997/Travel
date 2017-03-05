@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_into"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.administrator.travel.offlinemap.MainIntoActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/spot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/spot_summer"
+                android:layout_width="640dp"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="#abe95a"
+                android:text="八大关景区"
+                android:textSize="48sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="#abe95a"
+                android:text="\n“八大关景区”位于汇泉东部，是中国著名的风景疗养区，面积70余公顷，十条幽静清凉的大路纵横其间，主要大路因以我国八大著名关隘命名，故统称为八大关。"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/spot_autumn"
+                android:layout_width="640dp"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/spot_winter"
+                android:layout_width="640dp"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/spot_spring"
+                android:layout_width="640dp"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"/>
+
+
+            <LinearLayout
+                android:id="@+id/line_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+
+                <Button
+                    android:id="@+id/share_life_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorBlue"
+                    android:text="开始导航"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
