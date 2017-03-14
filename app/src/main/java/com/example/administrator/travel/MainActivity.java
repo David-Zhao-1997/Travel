@@ -16,6 +16,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
@@ -79,18 +80,23 @@ public class MainActivity extends AppCompatActivity
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-    public static void verifyStoragePermissions(Activity activity)
-    {
-        // Check if we have write permission
-        int permission = ActivityCompat.checkSelfPermission(activity,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//    public static void verifyStoragePermissions(Activity activity)
+//    {
+//        // Check if we have write permission
+//        int permission = ActivityCompat.checkSelfPermission(activity,
+//                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//
+//        if (permission != PackageManager.PERMISSION_GRANTED)
+//        {
+//            // We don't have permission so prompt the user
+//            ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,
+//                REQUEST_EXTERNAL_STORAGE);
+//        }
+//    }
 
-        if (permission != PackageManager.PERMISSION_GRANTED)
-        {
-            // We don't have permission so prompt the user
-            ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE);
-        }
+    public static void verifyStoragePermissionsPro(Activity activity)
+    {
+
     }
 
 
@@ -124,7 +130,7 @@ public class MainActivity extends AppCompatActivity
 
         String[] perms = {"android.permission. WRITE_EXTERNAL_STORAGE"};
 
-        verifyStoragePermissions(this);
+//        verifyStoragePermissions(this);
 
     }
 
