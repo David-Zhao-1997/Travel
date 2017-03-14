@@ -60,6 +60,8 @@ public class MyService extends Service
             System.out.println("转换完毕");
             try
             {
+                System.out.println("socket:"+socket);
+                while(socket==null){}
                 dos = new DataOutputStream(socket.getOutputStream());
                 System.out.println("发送请求");
                 dos.writeUTF(s);
@@ -112,7 +114,7 @@ public class MyService extends Service
         {
             try
             {
-                socket = new Socket("192.168.43.44", 10000);
+                socket = new Socket("118.89.238.39", 10000);
 //                socket1 = new Socket("10.0.2.2", 10001);
                 System.out.println(socket);
                 ReadHandler rh = new ReadHandler();

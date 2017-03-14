@@ -39,7 +39,8 @@ import java.util.Date;
 /**
  * created by hanyuanfeng
  */
-public class Footstep extends AppCompatActivity {
+public class Footstep extends AppCompatActivity
+{
     private ArrayList<String> images = new ArrayList<>();
     private ArrayList<String> urls = new ArrayList<>();
     private int maxSelectNum = 20;
@@ -50,46 +51,57 @@ public class Footstep extends AppCompatActivity {
     private String mName;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.footstep);
-        mButton=(Button)findViewById(R.id.share_life_btn);
-        mNameText=(TextView)findViewById(R.id.login_remind);
+        mButton = (Button) findViewById(R.id.share_life_btn);
+        mNameText = (TextView) findViewById(R.id.login_remind);
 
         SharedPreferences sharedPreferences1 = getSharedPreferences(
                 "user_config", Context.MODE_PRIVATE);
-        String username = sharedPreferences1.getString("username",null);
-        System.out.println("获取成功："+username);
-        mName=username;
+        String username = sharedPreferences1.getString("username", null);
+        System.out.println("获取成功：" + username);
+        mName = username;
         //显示昵称
-        if(mName!=null){
-           mNameText.setText(mName);
+        if (mName != null)
+        {
+            mNameText.setText(mName);
         }
         //显示头像
         Bitmap bmBitmap = null;
-        try {
+        try
+        {
             bmBitmap = BitmapFactory.decodeFile(readtext());
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
         mHeadImage = (ImageView) findViewById(R.id.index_my_list1_headphoto);
-        if (bmBitmap != null) {
+        if (bmBitmap != null)
+        {
             Bitmap mbitmap = toRoundBitmap(bmBitmap);
             mHeadImage.setImageBitmap(mbitmap);
-        }else{
+        }
+        else
+        {
             mHeadImage.setImageResource(R.drawable.person_default);
         }
 
-        mButton.setOnClickListener(new View.OnClickListener() {
+        mButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                initView(1,false);
+            public void onClick(View v)
+            {
+                initView(1, false);
             }
         });
 
     }
 
-    public void initView(int mode, boolean isCrop) {
+    public void initView(int mode, boolean isCrop)
+    {
         //mode 1表示多选，2表示单
         boolean isShow = true;
         boolean isPreview = true;
@@ -97,15 +109,19 @@ public class Footstep extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK && requestCode == ImageSelectorActivity.REQUEST_IMAGE) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (resultCode == RESULT_OK && requestCode == ImageSelectorActivity.REQUEST_IMAGE)
+        {
             images = (ArrayList<String>) data.getSerializableExtra(ImageSelectorActivity.REQUEST_OUTPUT);
             getImage(images);
         }
     }
 
-    public void getImage(ArrayList<String> images) {
-        if (images.size() == 1) {
+    public void getImage(ArrayList<String> images)
+    {
+        if (images.size() == 1)
+        {
             File mfile = new File(images.get(0));
             Url = getUrl(mfile);
 //            if (mFlag == true) {
@@ -120,8 +136,11 @@ public class Footstep extends AppCompatActivity {
 //                Bitmap mbitmap = toRoundBitmap(bmBitmap);
 //                mHeadImage.setImageBitmap(mbitmap);
 //            }
-        } else {
-            for (int i = 0; i < images.size(); i++) {
+        }
+        else
+        {
+            for (int i = 0; i < images.size(); i++)
+            {
                 File mfile = new File(images.get(i));
                 urls.add(getUrl(mfile));
             }
@@ -129,22 +148,28 @@ public class Footstep extends AppCompatActivity {
 
     }
 
-    public void copyFile(String oldPath, String newPath) {
-        try {
+    public void copyFile(String oldPath, String newPath)
+    {
+        try
+        {
             int byteread = 0;
             File oldfile = new File(oldPath);
-            if (oldfile.exists()) { //文件存在时
+            if (oldfile.exists())
+            { //文件存在时
                 InputStream inStream = new FileInputStream(oldPath); //读入原文件
                 FileOutputStream fs = new FileOutputStream(newPath);
                 //建立缓冲区
                 byte[] buffer = new byte[1444];
-                while ((byteread = inStream.read(buffer)) != -1) {
+                while ((byteread = inStream.read(buffer)) != -1)
+                {
                     fs.write(buffer, 0, byteread);
                 }
                 inStream.close();
                 System.out.println("写入成功");
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.out.println("复制单个文件操作出错");
             e.printStackTrace();
 
@@ -152,7 +177,8 @@ public class Footstep extends AppCompatActivity {
 
     }
 
-    public String getUrl(File oldfile) {
+    public String getUrl(File oldfile)
+    {
         //获取当前时间
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
         Date curDate = new Date(System.currentTimeMillis());
@@ -169,15 +195,18 @@ public class Footstep extends AppCompatActivity {
 
     /**
      * 转换图片成圆形
+     *
      * @param bitmap 传入Bitmap对象
      * @return
      */
-    public Bitmap toRoundBitmap(Bitmap bitmap) {
+    public Bitmap toRoundBitmap(Bitmap bitmap)
+    {
         int width = 219;
         int height = 219;
         float roundPx;
         float left, top, right, bottom, dst_left, dst_top, dst_right, dst_bottom;
-        if (width <= height) {
+        if (width <= height)
+        {
             roundPx = width / 2;
 
             left = 0;
@@ -191,7 +220,9 @@ public class Footstep extends AppCompatActivity {
             dst_top = 0;
             dst_right = width;
             dst_bottom = width;
-        } else {
+        }
+        else
+        {
             roundPx = height / 2;
 
             float clip = (width - height) / 2;
@@ -244,19 +275,24 @@ public class Footstep extends AppCompatActivity {
 //        }
 //    }
 
-    public String readtext() throws IOException {
+    public String readtext() throws IOException
+    {
         String mStr = "";
         File mfile = new File(Environment.getExternalStorageDirectory(), "apphistory.txt");
-        if (mfile.exists()) {
+        if (mfile.exists())
+        {
             FileInputStream fis = new FileInputStream(mfile.getAbsolutePath());
             DataInputStream dataIO = new DataInputStream(fis);
             String strLine = null;
-            while ((strLine = dataIO.readLine()) != null) {
+            while ((strLine = dataIO.readLine()) != null)
+            {
                 mStr += strLine;
             }
             dataIO.close();
             fis.close();
-        } else {
+        }
+        else
+        {
 
         }
         return mStr;
