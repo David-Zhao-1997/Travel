@@ -1,6 +1,8 @@
 package com.example.administrator.travel;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,8 +11,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -71,12 +75,16 @@ public class DemoAdapter2 extends RecyclerView.Adapter<DemoAdapter2.BaseViewHold
     private class OneViewHolder extends BaseViewHolder
     {
         private ImageView ivImage;
-        private TextView ivText;
+//        private TextView ivText;
+private ImageButton ok;
+        private ImageButton mark;
 
         public OneViewHolder(View view)
         {
             super(view);
             ivImage = (ImageView) view.findViewById(R.id.ivImage);
+            ok = (ImageButton) view.findViewById(R.id.ok);
+            mark = (ImageButton) view.findViewById(R.id.mark);
 //            ivText = (TextView) view.findViewById(R.id.ivText);
 //            int width = ((Activity) ivImage.getContext()).getWindowManager().getDefaultDisplay().getWidth();
             int width = 1440;//TODO 修改
@@ -94,10 +102,35 @@ public class DemoAdapter2 extends RecyclerView.Adapter<DemoAdapter2.BaseViewHold
             if (data != null)
             {
                 String text = (String) data;
+                final String final_text = text.split("/")[text.split("/").length-1];
 //                System.out.println(text);
                 Glide.with(itemView.getContext()).load(text).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.mipmap.ic_launcher).crossFade().into(ivImage);
                 System.out.println(text);
-                ivText.setOnClickListener(new clikListener(text));
+//                ivText.setOnClickListener(new clikListener(text));
+                ok.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        SharedPreferences sharedPreferences1 = MainActivity.mainActivity.getSharedPreferences(
+                                "user_config", Context.MODE_PRIVATE);
+                        String username = sharedPreferences1.getString("username", null);
+//                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
+                        Toast.makeText(MainActivity.mainActivity, username+":点赞:"+final_text, Toast.LENGTH_SHORT).show();
+                    }
+                });
+                mark.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View view)
+                    {
+                        SharedPreferences sharedPreferences1 = MainActivity.mainActivity.getSharedPreferences(
+                                "user_config", Context.MODE_PRIVATE);
+                        String username = sharedPreferences1.getString("username", null);
+//                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
+                        Toast.makeText(MainActivity.mainActivity, username+":评论:"+final_text, Toast.LENGTH_SHORT).show();
+                    }
+                });
                 ivImage.setOnClickListener(new clikListener(text));
                 Bitmap bitmap = BitmapFactory.decodeResource(res, R.mipmap.ic_launcher);
                 //异步获得bitmap图片颜色值
