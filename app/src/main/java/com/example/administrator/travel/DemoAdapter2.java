@@ -77,7 +77,7 @@ public class DemoAdapter2 extends RecyclerView.Adapter<DemoAdapter2.BaseViewHold
         {
             super(view);
             ivImage = (ImageView) view.findViewById(R.id.ivImage);
-            ivText = (TextView) view.findViewById(R.id.ivText);
+//            ivText = (TextView) view.findViewById(R.id.ivText);
 //            int width = ((Activity) ivImage.getContext()).getWindowManager().getDefaultDisplay().getWidth();
             int width = 1440;//TODO 修改
             ViewGroup.LayoutParams params = ivImage.getLayoutParams();
