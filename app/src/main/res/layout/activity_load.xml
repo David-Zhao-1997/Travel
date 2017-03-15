@@ -6,7 +6,7 @@
     android:id="@+id/activity_load"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/load1"
+    android:background="@drawable/load"
     tools:context="com.example.administrator.travel.LoadActivity">
 
 </RelativeLayout>
