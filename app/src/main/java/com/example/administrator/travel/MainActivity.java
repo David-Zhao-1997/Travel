@@ -112,9 +112,12 @@ public class MainActivity extends AppCompatActivity
         startService(intent);
     }
 
-    public static void getUserName()
+    public String getUserName()
     {
-
+        SharedPreferences sharedPreferences1 = getSharedPreferences(
+                "user_config", Context.MODE_PRIVATE);
+        String username = sharedPreferences1.getString("username", null);
+        return username;
     }
 
 

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -139,11 +140,26 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
 //                        Toast.makeText(MainActivity.mainActivity, username + ":点赞:" + final_text, Toast.LENGTH_SHORT).show();
                         if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
                         {
-                            System.out.println("取消赞");
+//                            System.out.println("取消赞")；
+                            ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_idle));
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("obj", new LikeMessage(final_text,MainActivity.mainActivity.getUserName()));
+                            Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
+                            intent.putExtras(bundle);
+                            intent.putExtra("MSG",1);
+                            MainActivity.mainActivity.startService(intent);
+
                         }
                         else
                         {
-                            System.out.println("点赞");
+//                            System.out.println("点赞");
+                            ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("obj", new DislikeMessage(final_text,MainActivity.mainActivity.getUserName()));
+                            Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
+                            intent.putExtras(bundle);
+                            intent.putExtra("MSG",1);
+                            MainActivity.mainActivity.startService(intent);
                         }
                     }
                 });
