@@ -1,16 +1,20 @@
 package com.example.administrator.travel;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.RingtoneManager;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -83,8 +87,14 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
             ivImage = (ImageView) view.findViewById(R.id.ivImage);
             ok = (ImageButton) view.findViewById(R.id.ok);
             mark = (ImageButton) view.findViewById(R.id.mark);
-//            int width = ((Activity) ivImage.getContext()).getWindowManager().getDefaultDisplay().getWidth();
-            int width = 1440;//TODO 修改
+            Context context = MainActivity.mainActivity.getBaseContext();
+            WindowManager manager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+            DisplayMetrics dm=new DisplayMetrics();
+            manager.getDefaultDisplay().getMetrics(dm);
+            int width=dm.widthPixels;
+            int height=dm.heightPixels;
+//            int width = context.getWindowManager().getDefaultDisplay().getWidth();
+//            int width = 1440;//TODO 修改
             ViewGroup.LayoutParams params = ivImage.getLayoutParams();
             //设置图片的相对于屏幕的宽高比
             params.width = width / 2;

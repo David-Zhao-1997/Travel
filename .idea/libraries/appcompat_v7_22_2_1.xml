@@ -4,8 +4,8 @@
       <root url="jar://$PROJECT_DIR$/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/28f99ab6b84dde87332cf49a8e591e2a14f13c64/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/28f99ab6b84dde87332cf49a8e591e2a14f13c64/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/8643863a3e5eb5de8b13209b3340bdedfc657076/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/8643863a3e5eb5de8b13209b3340bdedfc657076/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
