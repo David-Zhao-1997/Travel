@@ -3,20 +3,15 @@ package com.example.administrator.travel;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.IBinder;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.util.Arrays;
 
 public class MyService extends Service
 {
@@ -49,7 +44,7 @@ public class MyService extends Service
     public int onStartCommand(Intent intent, int flags, int startId)
     {
         int msg = intent.getIntExtra("MSG", 0);
-        if (msg == 1)
+        if (msg == 1)//对象发送
         {
 
 
@@ -60,8 +55,10 @@ public class MyService extends Service
             System.out.println("转换完毕");
             try
             {
-                System.out.println("socket:"+socket);
-                while(socket==null){}
+                System.out.println("socket:" + socket);
+                while (socket == null)
+                {
+                }
                 dos = new DataOutputStream(socket.getOutputStream());
                 System.out.println("发送请求");
                 dos.writeUTF(s);
@@ -72,13 +69,13 @@ public class MyService extends Service
             }
             return super.onStartCommand(intent, flags, startId);
         }
-        else if (msg == 2)
+        else if (msg == 2)//图片发送
         {
 
             try
             {
                 final String url = intent.getStringExtra("url");
-                System.out.println(url+"将被上传");
+                System.out.println(url + "将被上传");
                 new Thread(new Runnable()
                 {
                     @Override
@@ -160,16 +157,29 @@ public class MyService extends Service
                         intent.putExtras(bundle);
                         sendBroadcast(intent);
                     }
-                    if (object instanceof PicReply)
+                    else if (object instanceof PicReply)
                     {
-                        PicReply picReply = (PicReply)object;
-                        System.out.println("列表："+picReply.getFilelist());
+                        PicReply picReply = (PicReply) object;
+                        System.out.println("列表：" + picReply.getFilelist());
                         Bundle bundle = new Bundle();
                         bundle.putSerializable("key", picReply);
                         Intent intent = new Intent();
                         intent.setAction("default");
                         intent.putExtras(bundle);
                         sendBroadcast(intent);
+                    }
+                    else if (object instanceof GetLikeInfoReply)
+                    {
+                        GetLikeInfoReply getLikeInfoReply = (GetLikeInfoReply) object;
+                        MainActivity.mainActivity.LikeMap = getLikeInfoReply.hashMap;
+                        System.out.println("likeMap:"+MainActivity.mainActivity.LikeMap);
+                        PicInfo picInfo = MainActivity.mainActivity.LikeMap.get("shilaoren-win.png");
+                        System.out.println("likeNum:"+picInfo.likeNum);
+                        System.out.println("flag:"+picInfo.flag);
+                    }
+                    else
+                    {
+                        System.out.println(s);
                     }
                 }
             }

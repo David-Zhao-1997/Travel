@@ -1,13 +1,11 @@
 package com.example.administrator.travel;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.RingtoneManager;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -17,7 +15,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -51,7 +48,6 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
     @Override
     public void onBindViewHolder(DemoAdapter.BaseViewHolder holder, int position)
     {
-
         holder.setData(dataList.get(position));
     }
 
@@ -88,11 +84,11 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
             ok = (ImageButton) view.findViewById(R.id.ok);
             mark = (ImageButton) view.findViewById(R.id.mark);
             Context context = MainActivity.mainActivity.getBaseContext();
-            WindowManager manager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
-            DisplayMetrics dm=new DisplayMetrics();
+            WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            DisplayMetrics dm = new DisplayMetrics();
             manager.getDefaultDisplay().getMetrics(dm);
-            int width=dm.widthPixels;
-            int height=dm.heightPixels;
+            int width = dm.widthPixels;
+            int height = dm.heightPixels;
 //            int width = context.getWindowManager().getDefaultDisplay().getWidth();
 //            int width = 1440;//TODO 修改
             ViewGroup.LayoutParams params = ivImage.getLayoutParams();
@@ -109,7 +105,23 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
             if (data != null)
             {
                 String text = (String) data;
-                final String final_text = text.split("/")[text.split("/").length-1];
+                final String final_text = text.split("/")[text.split("/").length - 1];
+                /*
+                加载点赞信息
+                 */
+                while (MainActivity.mainActivity.LikeMap == null)
+                {
+                }
+                System.out.println("get:" + MainActivity.mainActivity.LikeMap.get(final_text));
+                if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
+                {
+                    System.out.println("设置图片");
+                    ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
+                }
+
+                /*
+                加载点赞信息
+                 */
 //                System.out.println(text);
                 Glide.with(itemView.getContext()).load(text).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.mipmap.ic_launcher).crossFade().into(ivImage);
                 System.out.println(text);
@@ -124,7 +136,15 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                                 "user_config", Context.MODE_PRIVATE);
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
-                        Toast.makeText(MainActivity.mainActivity, username+":点赞:"+final_text, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.mainActivity, username + ":点赞:" + final_text, Toast.LENGTH_SHORT).show();
+                        if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
+                        {
+                            System.out.println("取消赞");
+                        }
+                        else
+                        {
+                            System.out.println("点赞");
+                        }
                     }
                 });
                 mark.setOnClickListener(new View.OnClickListener()
@@ -136,7 +156,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                                 "user_config", Context.MODE_PRIVATE);
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
-                        Toast.makeText(MainActivity.mainActivity, username+":评论:"+final_text, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.mainActivity, username + ":评论:" + final_text, Toast.LENGTH_SHORT).show();
                     }
                 });
                 //TODO 这里需要重新设置监听器
@@ -180,10 +200,10 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
 
         public clikListener(String text)
         {
-            url_Winter=text;
-            url_Autumn = text.replace("win","aut");
-            url_Summer = text.replace("win","sum");
-            url_Spring = text.replace("win","spr");
+            url_Winter = text;
+            url_Autumn = text.replace("win", "aut");
+            url_Summer = text.replace("win", "sum");
+            url_Spring = text.replace("win", "spr");
 
         }
 
@@ -191,10 +211,10 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
         public void onClick(View view)
         {
             Intent mintent = new Intent(MainActivity.mainActivity, MainIntoActivity.class);
-            mintent.putExtra("Summer",url_Summer);
-            mintent.putExtra("Autumn",url_Autumn);
-            mintent.putExtra("Spring",url_Spring);
-            mintent.putExtra("Winter",url_Winter);
+            mintent.putExtra("Summer", url_Summer);
+            mintent.putExtra("Autumn", url_Autumn);
+            mintent.putExtra("Spring", url_Spring);
+            mintent.putExtra("Winter", url_Winter);
             MainActivity.mainActivity.startActivity(mintent);
         }
     }

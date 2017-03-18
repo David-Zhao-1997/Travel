@@ -8,9 +8,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -87,7 +89,12 @@ private ImageButton ok;
             mark = (ImageButton) view.findViewById(R.id.mark);
 //            ivText = (TextView) view.findViewById(R.id.ivText);
 //            int width = ((Activity) ivImage.getContext()).getWindowManager().getDefaultDisplay().getWidth();
-            int width = 1440;//TODO 修改
+//            int width = 1440;//TODO 修改
+            Context context = MainActivity.mainActivity.getBaseContext();
+            WindowManager manager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
+            DisplayMetrics dm=new DisplayMetrics();
+            manager.getDefaultDisplay().getMetrics(dm);
+            int width=dm.widthPixels;
             ViewGroup.LayoutParams params = ivImage.getLayoutParams();
             //设置图片的相对于屏幕的宽高比
             params.width = width / 2;

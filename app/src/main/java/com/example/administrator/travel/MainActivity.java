@@ -41,10 +41,12 @@ import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
 {
     public static MainActivity mainActivity;
+    public HashMap<String,PicInfo> LikeMap;
     private ArrayList<String> images = new ArrayList<>();
     private ArrayList<String> urls = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -96,6 +98,27 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    public void getLikeInfo()
+    {
+        SharedPreferences sharedPreferences1 = getSharedPreferences(
+                "user_config", Context.MODE_PRIVATE);
+        String username = sharedPreferences1.getString("username", null);
+//        System.out.println("获取成功：" + username);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("obj", new GetLikeInfoRequest(username));
+        Intent intent = new Intent(MainActivity.this, MyService.class);
+        intent.putExtras(bundle);
+        intent.putExtra("MSG",1);
+        startService(intent);
+    }
+
+    public static void getUserName()
+    {
+
+    }
+
+
+
 
     public void startAct(Intent intent)
     {
@@ -109,6 +132,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         findView();
         mainActivity = this;
+
+        getLikeInfo();
+
+
+//        System.out.println(s);
         recyclerView = (RecyclerView) findViewById(R.id.recylerview);
         recyclerView.setHasFixedSize(true);
 
@@ -293,6 +321,7 @@ public class MainActivity extends AppCompatActivity
 //景点
                 if (view.getId() == button1.getId())
                 {
+                    getLikeInfo();
                     setContentView(R.layout.activity_main);
                     recyclerView = (RecyclerView) findViewById(R.id.recylerview);
                     recyclerView.setHasFixedSize(true);
@@ -313,6 +342,7 @@ public class MainActivity extends AppCompatActivity
                 //足迹
                 else if (view.getId() == button3.getId())
                 {
+                    getLikeInfo();
                     setContentView(R.layout.footstep);
                     findView();
 

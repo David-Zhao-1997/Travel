@@ -371,7 +371,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             try
             {
                 // Simulate network access.
-                Socket socket = new Socket("192.168.43.44", 10000);
+                Socket socket = new Socket("www.davidzhao.cn", 10000);
                 DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
                 XStream xStream = new XStream(new DomDriver());
                 String s = xStream.toXML(new LoginRequest(mEmail, mPassword));
@@ -394,7 +394,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         editor.putString("username", mEmail);
                         editor.commit();
 
-
+                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                        startActivity(intent);
                         return true;
                     }
                     else
