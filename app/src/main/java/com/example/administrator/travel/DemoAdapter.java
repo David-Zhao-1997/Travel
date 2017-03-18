@@ -119,6 +119,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                     System.out.println("设置图片");
                     ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
                 }
+                System.out.println("该图片点赞数量为："+MainActivity.mainActivity.LikeMap.get(final_text).likeNum);
 
                 /*
                 加载点赞信息
@@ -140,10 +141,10 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
 //                        Toast.makeText(MainActivity.mainActivity, username + ":点赞:" + final_text, Toast.LENGTH_SHORT).show();
                         if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
                         {
-//                            System.out.println("取消赞")；
+                            System.out.println("取消赞");
                             ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_idle));
                             Bundle bundle = new Bundle();
-                            bundle.putSerializable("obj", new LikeMessage(final_text,MainActivity.mainActivity.getUserName()));
+                            bundle.putSerializable("obj", new DislikeMessage(final_text,MainActivity.mainActivity.getUserName()));
                             Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
                             intent.putExtras(bundle);
                             intent.putExtra("MSG",1);
@@ -152,10 +153,10 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                         }
                         else
                         {
-//                            System.out.println("点赞");
+                            System.out.println("点赞");
                             ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
                             Bundle bundle = new Bundle();
-                            bundle.putSerializable("obj", new DislikeMessage(final_text,MainActivity.mainActivity.getUserName()));
+                            bundle.putSerializable("obj", new LikeMessage(final_text,MainActivity.mainActivity.getUserName()));
                             Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
                             intent.putExtras(bundle);
                             intent.putExtra("MSG",1);
