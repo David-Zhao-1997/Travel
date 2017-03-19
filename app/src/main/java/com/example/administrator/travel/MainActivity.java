@@ -509,6 +509,8 @@ public class MainActivity extends AppCompatActivity
                     mGoLoginBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            Intent mIntent = new Intent(MainActivity.this, LoginActivity.class);
+                            startActivity(mIntent);
                             //从这里写登录代码
                         }
                     });
