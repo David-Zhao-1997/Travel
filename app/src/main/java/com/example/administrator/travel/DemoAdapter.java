@@ -119,7 +119,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                     System.out.println("设置图片");
                     ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
                 }
-                System.out.println("该图片点赞数量为："+MainActivity.mainActivity.LikeMap.get(final_text).likeNum);
+                System.out.println("该图片点赞数量为：" + MainActivity.mainActivity.LikeMap.get(final_text).likeNum);
 
                 /*
                 加载点赞信息
@@ -139,27 +139,30 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
 //                        Toast.makeText(MainActivity.mainActivity, username + ":点赞:" + final_text, Toast.LENGTH_SHORT).show();
+                        System.out.println(MainActivity.mainActivity.LikeMap.get(final_text).flag);
                         if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
                         {
+                            MainActivity.mainActivity.LikeMap.get(final_text).flag = false;
                             System.out.println("取消赞");
                             ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_idle));
                             Bundle bundle = new Bundle();
-                            bundle.putSerializable("obj", new DislikeMessage(final_text,MainActivity.mainActivity.getUserName()));
+                            bundle.putSerializable("obj", new DislikeMessage(final_text, MainActivity.mainActivity.getUserName()));
                             Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
                             intent.putExtras(bundle);
-                            intent.putExtra("MSG",1);
+                            intent.putExtra("MSG", 1);
                             MainActivity.mainActivity.startService(intent);
 
                         }
                         else
                         {
                             System.out.println("点赞");
+                            MainActivity.mainActivity.LikeMap.get(final_text).flag = true;
                             ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
                             Bundle bundle = new Bundle();
-                            bundle.putSerializable("obj", new LikeMessage(final_text,MainActivity.mainActivity.getUserName()));
+                            bundle.putSerializable("obj", new LikeMessage(final_text, MainActivity.mainActivity.getUserName()));
                             Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
                             intent.putExtras(bundle);
-                            intent.putExtra("MSG",1);
+                            intent.putExtra("MSG", 1);
                             MainActivity.mainActivity.startService(intent);
                         }
                     }

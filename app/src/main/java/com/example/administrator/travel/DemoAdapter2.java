@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -15,12 +16,10 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.administrator.travel.offlinemap.MainIntoActivity;
 import com.example.administrator.travel.offlinemap.MainIntoActivity2;
 
 import java.util.ArrayList;
@@ -77,8 +76,8 @@ public class DemoAdapter2 extends RecyclerView.Adapter<DemoAdapter2.BaseViewHold
     private class OneViewHolder extends BaseViewHolder
     {
         private ImageView ivImage;
-//        private TextView ivText;
-private ImageButton ok;
+        //        private TextView ivText;
+        private ImageButton ok;
         private ImageButton mark;
 
         public OneViewHolder(View view)
@@ -87,14 +86,11 @@ private ImageButton ok;
             ivImage = (ImageView) view.findViewById(R.id.ivImage);
             ok = (ImageButton) view.findViewById(R.id.ok);
             mark = (ImageButton) view.findViewById(R.id.mark);
-//            ivText = (TextView) view.findViewById(R.id.ivText);
-//            int width = ((Activity) ivImage.getContext()).getWindowManager().getDefaultDisplay().getWidth();
-//            int width = 1440;//TODO 修改
             Context context = MainActivity.mainActivity.getBaseContext();
-            WindowManager manager = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
-            DisplayMetrics dm=new DisplayMetrics();
+            WindowManager manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            DisplayMetrics dm = new DisplayMetrics();
             manager.getDefaultDisplay().getMetrics(dm);
-            int width=dm.widthPixels;
+            int width = dm.widthPixels;
             ViewGroup.LayoutParams params = ivImage.getLayoutParams();
             //设置图片的相对于屏幕的宽高比
             params.width = width / 2;
@@ -109,7 +105,24 @@ private ImageButton ok;
             if (data != null)
             {
                 String text = (String) data;
-                final String final_text = text.split("/")[text.split("/").length-1];
+                final String final_text = text.split("/")[text.split("/").length - 1];
+                /*
+                加载点赞信息
+                 */
+                while (MainActivity.mainActivity.LikeMap == null)
+                {
+                }
+                System.out.println("get:" + MainActivity.mainActivity.LikeMap.get(final_text));
+                if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
+                {
+                    System.out.println("设置图片");
+                    ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
+                }
+                System.out.println("该图片点赞数量为：" + MainActivity.mainActivity.LikeMap.get(final_text).likeNum);
+
+                /*
+                加载点赞信息
+                 */
 //                System.out.println(text);
                 Glide.with(itemView.getContext()).load(text).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.mipmap.ic_launcher).crossFade().into(ivImage);
                 System.out.println(text);
@@ -123,7 +136,32 @@ private ImageButton ok;
                                 "user_config", Context.MODE_PRIVATE);
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
-                        Toast.makeText(MainActivity.mainActivity, username+":点赞:"+final_text, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.mainActivity, username + ":点赞:" + final_text, Toast.LENGTH_SHORT).show();
+                        if (MainActivity.mainActivity.LikeMap.get(final_text).flag)
+                        {
+                            MainActivity.mainActivity.LikeMap.get(final_text).flag = false;
+                            System.out.println("取消赞");
+                            ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_idle));
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("obj", new DislikeMessage(final_text, MainActivity.mainActivity.getUserName()));
+                            Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
+                            intent.putExtras(bundle);
+                            intent.putExtra("MSG", 1);
+                            MainActivity.mainActivity.startService(intent);
+
+                        }
+                        else
+                        {
+                            System.out.println("点赞");
+                            MainActivity.mainActivity.LikeMap.get(final_text).flag = true;
+                            ok.setImageDrawable(MainActivity.mainActivity.getResources().getDrawable(R.drawable.ok_act));
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("obj", new LikeMessage(final_text, MainActivity.mainActivity.getUserName()));
+                            Intent intent = new Intent(MainActivity.mainActivity, MyService.class);
+                            intent.putExtras(bundle);
+                            intent.putExtra("MSG", 1);
+                            MainActivity.mainActivity.startService(intent);
+                        }
                     }
                 });
                 mark.setOnClickListener(new View.OnClickListener()
@@ -135,7 +173,7 @@ private ImageButton ok;
                                 "user_config", Context.MODE_PRIVATE);
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
-                        Toast.makeText(MainActivity.mainActivity, username+":评论:"+final_text, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.mainActivity, username + ":评论:" + final_text, Toast.LENGTH_SHORT).show();
                     }
                 });
                 ivImage.setOnClickListener(new clikListener(text));
