@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
+            android:drawableLeft="@drawable/p_setting"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
             android:textColor="@color/black"
@@ -62,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
+            android:drawableLeft="@drawable/p_weather"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
             android:textColor="@color/black"
@@ -86,7 +86,30 @@
         android:layout_width="match_parent"
         android:layout_height="8dp"
         android:background="@color/normal_bg_color" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:gravity="center_vertical"
+        android:padding="@dimen/normal_space" >
+
+        <TextView
+            android:id="@+id/go_map_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/p_map"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="查看地图"
+            android:textSize="@dimen/text_size_default"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hui_discount_item_rule_arrow" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -99,7 +122,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
+            android:drawableLeft="@drawable/p_offmap"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
             android:textColor="@color/black"
@@ -127,110 +150,6 @@
             android:src="@drawable/hui_discount_item_rule_arrow" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:background="@color/normal_bg_color" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:gravity="center_vertical"
-        android:padding="@dimen/normal_space" >
-
-        <TextView
-            android:id="@+id/go_map_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
-            android:drawablePadding="3dp"
-            android:gravity="center_vertical"
-            android:text="查看地图"
-            android:textSize="@dimen/text_size_default"
-            android:textColor="@color/black"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hui_discount_item_rule_arrow" />
-    </LinearLayout>
-
-    <View
-        android:layout_marginLeft="11dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/normal_bg_color" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:gravity="center_vertical"
-        android:padding="@dimen/normal_space" >
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
-            android:drawablePadding="3dp"
-            android:gravity="center_vertical"
-            android:text="每日推荐"
-            android:textSize="@dimen/text_size_default"
-            android:textColor="@color/black"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hui_discount_item_rule_arrow" />
-    </LinearLayout>
-
-    <View
-        android:layout_marginLeft="11dp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/normal_bg_color" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:gravity="center_vertical"
-        android:padding="@dimen/normal_space" >
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
-            android:drawablePadding="3dp"
-            android:gravity="center_vertical"
-            android:text="最近浏览"
-            android:textSize="@dimen/text_size_default"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:gravity="center_vertical"
-            android:text="NEW"
-            android:visibility="gone" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/new_icon"
-            android:visibility="gone" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/hui_discount_item_rule_arrow" />
-    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -245,10 +164,11 @@
         android:padding="@dimen/normal_space" >
 
         <TextView
+            android:id="@+id/about_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
+            android:drawableLeft="@drawable/p_about"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
             android:text="关于"
@@ -271,7 +191,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="8dp"
+        android:layout_height="1dp"
         android:background="@color/normal_bg_color" />
 
     <LinearLayout
@@ -282,10 +202,11 @@
         android:padding="@dimen/normal_space" >
 
         <TextView
+            android:id="@+id/feedback_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/android_smaller"
+            android:drawableLeft="@drawable/p_con"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
             android:text="意见反馈"

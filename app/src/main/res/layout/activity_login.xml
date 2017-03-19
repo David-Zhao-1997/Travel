@@ -76,7 +76,8 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/sign_in"
                 android:textStyle="bold"
-                android:background="#858080"/>
+                android:textColor="#515658"
+                android:background="#FFE3E3E3"/>
 
             <Button
                 android:id="@+id/button"
@@ -87,7 +88,8 @@
                 android:text="@string/register"
                 android:textStyle="bold"
                 android:onClick="register"
-                android:background="#858080"/>
+                android:textColor="#515658"
+                android:background="#FFE3E3E3"/>
 
         </LinearLayout>
     </ScrollView>

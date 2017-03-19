@@ -74,8 +74,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/register"
+                android:textColor="#515658"
                 android:textStyle="bold"
-                android:background="#858080"/>
+                android:background="#FFE3E3E3"/>
 
         </LinearLayout>
     </ScrollView>

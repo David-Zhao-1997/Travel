@@ -39,20 +39,20 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_below="@id/ivImage"
-                android:background="#bababa">
+                android:background="#FFE3E3E3">
                 <ImageButton
                     android:id="@+id/ok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ok_idle"
-                    android:background="#bababa"
+                    android:background="#FFE3E3E3"
                     android:layout_alignParentLeft="true"/>
                 <ImageButton
                     android:id="@+id/mark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/mark"
-                    android:background="#bababa"
+                    android:background="#FFE3E3E3"
                     android:layout_alignParentRight="true"/>
             </RelativeLayout>
         </RelativeLayout>

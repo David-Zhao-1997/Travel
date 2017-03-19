@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
+        jar="F:\Android\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.1\constraint-layout-solver-1.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1ad79631209e77b0a2730fc112b4cc0c66a95132">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.1_d4f7f8a9d8e07066006e65224fd13f1ccae8bdb8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="F:\data\Travel1\app\libs\AMap_Search_V5.0.0_20170309.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="315a916b8186d7c5496a81cf683455c558196a1d">
         <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Search_V5.0.0_20170309_6e32df3fdcf908b689033e83d3d64c3e5ddabdc1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\25235\.android\build-cache\11c30abe4ddb1537e9ed0e849cc60afb5d4d9768\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7113302c965566b66df46c6ca75ea301576114a5">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c940a78743a69e5b3e82d23dbc759ca1ed76550b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,30 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\data\Travel1\app\libs\android-support-v4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="307c1cc532eabbf1d135b43e5c983c9da700449d">
-        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_6555b1b9f8de8c4e16d8c1ef8430d50782eb0fec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="F:\data\Travel1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c09d3c5c829cf748a65f9333b00bae53a365ef8f">
+        sha1="4d648252a1472be1e1a5c33800b9ff624f06a3d3">
         <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_e5af5c3e7b44cf9a29163a94f62907581aaa176d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\data\Travel1\app\libs\AMap_Location_V3.3.0_20170118.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="299ccce875c1bbd5eb2802923ae89946e22b7ee6">
-        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Location_V3.3.0_20170118_fe9614a4b518982092b1d9b9c23853f675390e31\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,12 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\data\Travel1\app\libs\pinyin4j-2.5.0.jar"
+        jar="F:\data\Travel1\app\libs\Android_Map3D_SDK_V5.0.0_20170311.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="ae353005f973da1cd8545b54354504c2503f6865">
-        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_5e365645b956384fa1b25d362a67d4fcf62c386e\classes.dex" />
+        sha1="1138283bb2b30bbf424a02eeeadab84edfc1571c">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Android_Map3D_SDK_V5.0.0_20170311_3682b65f149ebc4f6570b545173c64c38c689727\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,21 +75,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="F:\data\Travel1\app\libs\Android_Map3D_SDK_V5.0.0_20170311.jar"
+        jar="F:\data\Travel1\app\libs\android-support-v4.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="1138283bb2b30bbf424a02eeeadab84edfc1571c">
-        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Android_Map3D_SDK_V5.0.0_20170311_3682b65f149ebc4f6570b545173c64c38c689727\classes.dex" />
+        sha1="307c1cc532eabbf1d135b43e5c983c9da700449d">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_6555b1b9f8de8c4e16d8c1ef8430d50782eb0fec\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="F:\data\Travel1\app\libs\Msc.jar"
+        jar="F:\data\Travel1\app\libs\AMap_Location_V3.3.0_20170118.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
-        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_39ee7c1ba969b1dd65f19a9f93cac1f553b457d1\classes.dex" />
+        sha1="299ccce875c1bbd5eb2802923ae89946e22b7ee6">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Location_V3.3.0_20170118_fe9614a4b518982092b1d9b9c23853f675390e31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\data\Travel1\app\libs\pinyin4j-2.5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_5e365645b956384fa1b25d362a67d4fcf62c386e\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -99,6 +108,15 @@
         revision="25.0.0"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1bbcdecc40cd8889530101ac94cdec3de1805681\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\data\Travel1\app\libs\Msc.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_39ee7c1ba969b1dd65f19a9f93cac1f553b457d1\classes.dex" />
     </item>
 
 </items>

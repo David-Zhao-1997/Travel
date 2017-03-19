@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity
     private DemoAdapter2 adapter2;
     private int maxSelectNum = 20;
     private ImageView mHeadImage;
-    private TextView mNameText,mGomapBtn;
+    private LinearLayout mGoLoginBtn;
+    private TextView mNameText,mGomapBtn,mGoaboutBtn,mGoFeedbackBtn;
     private String Url;
     private boolean mFlag = false;
     private String mName;
@@ -198,6 +199,9 @@ public class MainActivity extends AppCompatActivity
         button4 = (Button) findViewById(R.id.button4);
         mGomapBtn=(TextView) findViewById(R.id.go_map_btn);
         mNameText = (TextView) findViewById(R.id.login_remind);
+        mGoFeedbackBtn=(TextView)findViewById(R.id.feedback_btn);
+        mGoaboutBtn=(TextView)findViewById(R.id.about_btn);
+        mGoLoginBtn=(LinearLayout)findViewById(R.id.login_btn);
         mSeetingText = (TextView) findViewById(R.id.me_item_1);
         mWeatherText = (TextView) findViewById(R.id.me_item_2);
         mHeadImage = (ImageView) findViewById(R.id.index_my_list1_headphoto);
@@ -495,6 +499,19 @@ public class MainActivity extends AppCompatActivity
                             startActivity(mIntent);
                         }
                     });
+                    mSeetingText.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent mIntent = new Intent(MainActivity.this, SettingClass.class);
+                            startActivity(mIntent);
+                        }
+                    });
+                    mGoLoginBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            //从这里写登录代码
+                        }
+                    });
                     mWeatherText.setOnClickListener(new View.OnClickListener()
                     {
                         @Override
@@ -502,6 +519,20 @@ public class MainActivity extends AppCompatActivity
                         {
                             System.out.println("mWeatherText");
                             Intent intent = new Intent(MainActivity.this,WeatherSearchActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                    mGoFeedbackBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(MainActivity.this,Feedback.class);
+                            startActivity(intent);
+                        }
+                    });
+                    mGoaboutBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(MainActivity.this,About.class);
                             startActivity(intent);
                         }
                     });
