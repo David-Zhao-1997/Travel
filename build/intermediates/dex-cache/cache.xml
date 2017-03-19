@@ -3,372 +3,102 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\8c51b98fef789571157b82138991253751990e1f\output\jars\classes.jar"
+        jar="F:\data\Travel1\app\libs\AMap_Search_V5.0.0_20170309.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cbd14af72518403283980848c29cae2bc28031f2\classes.dex" />
+        sha1="315a916b8186d7c5496a81cf683455c558196a1d">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Search_V5.0.0_20170309_6e32df3fdcf908b689033e83d3d64c3e5ddabdc1\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\gradle-3.1-bin\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_d60e77287ff152bd144ff715cb6e8ea071e87684\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\Msc.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_cf2c8b756bf1dc9f71a477ad4fa6e55c296db4b0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\AMap_Location_V3.3.0_20170118.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="299ccce875c1bbd5eb2802923ae89946e22b7ee6">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Location_V3.3.0_20170118_01de3f8bb99bea8f7f723f8a34b9a812924a5e07\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\Android_Map3D_SDK_V4.1.3_20161208.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c108325bfcbf3212ddc2e6ea6e55f56742537381">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\Android_Map3D_SDK_V4.1.3_20161208_446a287d4a1fcf55fdc6e725540bd46922f9dc48\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\723bf2e12406330850a8b72548ccf79647647d00\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_733cb24e5c9aa4817fbf35a697cbe7b2e9d97378\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\788ebf0595b54fe6c32897ccbb09a61b0a973d88\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_30608d05b84bbce0497eb57ed6399115fecdd4de\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\Volley.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="77faa9ffd189160d1e22c58fdf5eed0a9a08b816">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\Volley_a682ce5a0e7076b4ea73bbad8b6d5a8e228aa18d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\xstream-1.4.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bce3282142b63068260f021fcbe48b72e8d71a1a">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\xstream-1.4.7_2de6d12290db36a00f29899d166d2dd8d4e05501\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\9c12dd5153c46ed7f3aa8af302f3ffb6f1b1c03a\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9b03f32d0341eb0d4fd40266655c91c8dfee5c0f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\d48c3154482ea86ca969bef67ecf3afbe5d26847\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9be5e957849eb82ad9addf9bdb2896de8bf5654b">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_71546e8b1b261325472106418c2728abd6db40c9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\05d0b7ada17afb4c9ca6262f5a597156741b3f7d\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c9d18ae5a4f4b881186acc1359254d7796393950\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\AMap_Search_V4.0.0_20170111.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="aec76476b2bf633ec5b7f26815cd7d630b434d4c">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Search_V4.0.0_20170111_f08cbe95b06b56a3815a4b41867df5fcae52d1c5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\009c50c297e8763e6443a4508b04f11f7d1122a7\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_756e77f38c201799511389a3718ee075948a5419\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_773003d381d60abd894b983d73669fe9299a8276\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\8c51b98fef789571157b82138991253751990e1f\output\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_398aa29a63aad774c998339d74203def13cecf6d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\5a88e74795d2ed18cf455f5523bfa6ef2a2612a4\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5e3c9cfbae0f272ee258c6af158e4f93595dc8bc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\Volley.jar"
+        jar="F:\data\Travel1\app\libs\Volley.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="77faa9ffd189160d1e22c58fdf5eed0a9a08b816">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\Volley_a682ce5a0e7076b4ea73bbad8b6d5a8e228aa18d\classes.dex" />
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Volley_79124cc96a4d3fd465fa7fb411b309462c88c8fb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\fefa9157441d69f9d312edb3565fa88a02b8285e\output\jars\classes.jar"
+        jar="F:\data\Travel1\app\libs\android-support-v4.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_39a3ba57dcbb1fccc3168d7e37bc73918082703b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\e89913e634f950dfdeb71064eb5436dd9d6b78c1\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="890be6e1e56a883c9b407a11e067a61886dec123">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_16d30a8a434b7c09f42f4595890c234d5a6bd811\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\fd22beaab450a91a9b990cff433a575f89b1c3da\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5941298679930ba7a2e59c36667f6c079e5499cc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\AMapNavi_1.9.4_AMapLocation_3.1.0_20161201.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f209f75378cba3058bef447fe41f9ec26fcd0baa">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMapNavi_1.9.4_AMapLocation_3.1.0_20161201_072d39e646fade7741f0d9feaebdbc6831b439e0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\gradle-3.1-bin\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_d60e77287ff152bd144ff715cb6e8ea071e87684\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\pinyin4j-2.5.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ae353005f973da1cd8545b54354504c2503f6865">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_bbda2c85350a5fdaecf6c36e13f8a60fd77300eb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\Android_Map3D_SDK_V4.1.3_20161208.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c108325bfcbf3212ddc2e6ea6e55f56742537381">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\Android_Map3D_SDK_V4.1.3_20161208_446a287d4a1fcf55fdc6e725540bd46922f9dc48\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\android-support-v4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
         sha1="307c1cc532eabbf1d135b43e5c983c9da700449d">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_69f93ec36e6121e3ed9ad50928f2d513434d877b\classes.dex" />
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_6555b1b9f8de8c4e16d8c1ef8430d50782eb0fec\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\AMap_Location_V3.3.0_20170118.jar"
+        jar="F:\data\Travel1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.1"
+        revision="25.0.0"
+        sha1="c09d3c5c829cf748a65f9333b00bae53a365ef8f">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_e5af5c3e7b44cf9a29163a94f62907581aaa176d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\data\Travel1\app\libs\AMap_Location_V3.3.0_20170118.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="299ccce875c1bbd5eb2802923ae89946e22b7ee6">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Location_V3.3.0_20170118_01de3f8bb99bea8f7f723f8a34b9a812924a5e07\classes.dex" />
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Location_V3.3.0_20170118_fe9614a4b518982092b1d9b9c23853f675390e31\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\Msc.jar"
+        jar="F:\data\Travel1\app\libs\AMapNavi_V1.9.4_20161222.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.1"
-        sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_cf2c8b756bf1dc9f71a477ad4fa6e55c296db4b0\classes.dex" />
+        revision="25.0.0"
+        sha1="801ce595ef97a678d310cd2d2855195a9daa48ee">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMapNavi_V1.9.4_20161222_ddcea2229b8acaa8c9e9b5b191624b62f90f6a1d\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\xstream-1.4.7.jar"
+        jar="F:\data\Travel1\app\libs\pinyin4j-2.5.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.1"
+        revision="25.0.0"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_5e365645b956384fa1b25d362a67d4fcf62c386e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\data\Travel1\app\libs\xstream-1.4.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="bce3282142b63068260f021fcbe48b72e8d71a1a">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\xstream-1.4.7_2de6d12290db36a00f29899d166d2dd8d4e05501\classes.dex" />
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\xstream-1.4.7_792fe020f46a4e9c8f12e86e2fc5987d24a84160\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_773003d381d60abd894b983d73669fe9299a8276\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\1254da54ea0e69669870f3adef888677ba3ea677\output\jars\classes.jar"
+        jar="F:\data\Travel1\app\libs\Android_Map3D_SDK_V5.0.0_20170311.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b9aa7edb04f783801fe0a198e7c3a2d1905ee0fd\classes.dex" />
+        sha1="1138283bb2b30bbf424a02eeeadab84edfc1571c">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Android_Map3D_SDK_V5.0.0_20170311_3682b65f149ebc4f6570b545173c64c38c689727\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\27a45e70b9e44e0f7712d6be5483e8def0a75451\output\jars\classes.jar"
+        jar="F:\data\Travel1\app\libs\Msc.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d6e9882404ef4fa9982fe98918c52ef12cf146df\classes.dex" />
+        sha1="994d12017bc2c9ba570180cde5500689d134e6e6">
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\2\Msc_39ee7c1ba969b1dd65f19a9f93cac1f553b457d1\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\9ed17e280262ce6e9ca5fa792d0d13fbaeaa6ffc\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a3cd589eb98308e8b0173feed3d717fe3ad04f21">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d29b9159164fd509412f48a7b799a665db5c05e7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="F:\data\Travel1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e627c22c57da290ff72bb67e7824a8ce6bfb1f84\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\3530536ba4462846b111173c9e7d02c58d3b3fa3\output\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_e6d8206b356f559266b80e931e651a3ca020abc8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\android-support-v4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="307c1cc532eabbf1d135b43e5c983c9da700449d">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_69f93ec36e6121e3ed9ad50928f2d513434d877b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\.android\build-cache\3530536ba4462846b111173c9e7d02c58d3b3fa3\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_da5ad8a0f8740cc4792e72d22293b62bf8987815\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c53162f4d63a6804b91a7dcac19d7cc3c7dfa218">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6e0d955fcfc8bbcbcdcd0ef5b770e54de217622e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\AMapNavi_1.9.4_AMapLocation_3.1.0_20161201.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f209f75378cba3058bef447fe41f9ec26fcd0baa">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMapNavi_1.9.4_AMapLocation_3.1.0_20161201_072d39e646fade7741f0d9feaebdbc6831b439e0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\pinyin4j-2.5.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ae353005f973da1cd8545b54354504c2503f6865">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_bbda2c85350a5fdaecf6c36e13f8a60fd77300eb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\libs\AMap_Search_V4.0.0_20170111.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aec76476b2bf633ec5b7f26815cd7d630b434d4c">
-        <dex dex="C:\Users\Administrator\Desktop\Travel-2.25.3\Travel\app\build\intermediates\transforms\dex\debug\folders\1000\2\AMap_Search_V4.0.0_20170111_f08cbe95b06b56a3815a4b41867df5fcae52d1c5\classes.dex" />
+        <dex dex="F:\data\Travel1\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1bbcdecc40cd8889530101ac94cdec3de1805681\classes.dex" />
     </item>
 
 </items>

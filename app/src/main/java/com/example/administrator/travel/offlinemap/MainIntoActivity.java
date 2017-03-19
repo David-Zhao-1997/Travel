@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -12,9 +13,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
+import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.model.Text;
 import com.example.administrator.travel.NaviActivity;
 import com.example.administrator.travel.R;
+import com.example.administrator.travel.RestRouteShowActivity;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -22,8 +29,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class MainIntoActivity extends AppCompatActivity
+public class MainIntoActivity extends AppCompatActivity implements LocationSource
 {
+    private AMapLocationClient mlocationClient;
+    private AMapLocationClientOption mLocationOption;
+    private AMapLocation myLastLocation;
     private ImageView mSpring;
     private ImageView mSummer;
     private ImageView mAutumn;
@@ -36,6 +46,8 @@ public class MainIntoActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_into);
+        initLocation();
+        startLocation();
         String url_Summer = getIntent().getExtras().getString("Summer");
         String url_Autumn = getIntent().getExtras().getString("Autumn");
         String url_Spring = getIntent().getExtras().getString("Spring");
@@ -48,8 +60,13 @@ public class MainIntoActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                Intent mIntent = new Intent(MainIntoActivity.this, NaviActivity.class);
-                startActivity(mIntent);
+                //                Intent mIntent = new Intent(MainIntoActivity.this, NaviActivity.class);
+//                startActivity(mIntent);
+                if (myLastLocation != null) {
+                    navijudge();
+                } else {
+                    System.out.println("错误");
+                }
             }
         });
         desctiption = (TextView) findViewById(R.id.description);
@@ -156,6 +173,168 @@ public class MainIntoActivity extends AppCompatActivity
                 e.printStackTrace();
             }
         }
+    }
+
+    /**
+     * 初始化定位
+     *
+     * @author hongming.wang
+     * @since 2.8.0
+     */
+    private void initLocation() {
+        //初始化client
+        mlocationClient = new AMapLocationClient(this.getApplicationContext());
+        //设置定位参数
+        mlocationClient.setLocationOption(getDefaultOption());
+        // 设置定位监听
+        mlocationClient.setLocationListener(locationListener);
+    }
+
+    /**
+     * 开始定位
+     *
+     * @author hongming.wang
+     * @modify han yuanfeng
+     * @since 2.8.0
+     */
+    private void startLocation() {
+        // 设置定位参数
+        mlocationClient.setLocationOption(mLocationOption);
+        // 启动定位
+        mlocationClient.startLocation();
+    }
+
+    private void navijudge() {
+        Intent intent = new Intent(MainIntoActivity.this, RestRouteShowActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putDouble("startLocation_latitude", myLastLocation.getLatitude());
+        bundle.putDouble("startLocation_longitude", myLastLocation.getLongitude());
+        bundle.putString("startAdName", myLastLocation.getAddress() + "附近");
+        bundle.putDouble("endLocation_latitude", 36.05336665);
+        bundle.putDouble("endLocation_longitude", 120.35115838);
+        bundle.putString("endAdName", "八大关附近");
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+
+    /**
+     * 默认的定位参数
+     *
+     * @author hongming.wang
+     * @modify han yuanfeng
+     * @since 2.8.0
+     */
+    private AMapLocationClientOption getDefaultOption() {
+        AMapLocationClientOption mOption = new AMapLocationClientOption();
+        mOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);//可选，设置定位模式，可选的模式有高精度、仅设备、仅网络。默认为高精度模式
+        mOption.setGpsFirst(true);//可选，设置是否gps优先，只在高精度模式下有效。默认关闭
+        mOption.setHttpTimeOut(30000);//可选，设置网络请求超时时间。默认为30秒。在仅设备模式下无效
+        mOption.setInterval(10000);//可选，设置定位间隔。默认为2秒
+        mOption.setNeedAddress(true);//可选，设置是否返回逆地理地址信息。默认是true
+        mOption.setOnceLocation(false);//可选，设置是否单次定位。默认是false
+        mOption.setOnceLocationLatest(false);//可选，设置是否等待wifi刷新，默认为false.如果设置为true,会自动变为单次定位，持续定位时不要使用
+        AMapLocationClientOption.setLocationProtocol(AMapLocationClientOption.AMapLocationProtocol.HTTP);//可选， 设置网络请求的协议。可选HTTP或者HTTPS。默认为HTTP
+        mOption.setSensorEnable(true);//可选，设置是否使用传感器。默认是false
+        // mOption.setWifiScan(false); //可选，设置是否开启wifi扫描。默认为true，如果设置为false会同时停止主动刷新，停止以后完全依赖于系统刷新，定位位置可能存在误差
+        mOption.setLocationCacheEnable(true); //可选，设置是否使用缓存定位，默认为true
+        return mOption;
+    }
+
+    /**
+     * 激活定位
+     */
+    @Override
+    public void activate(LocationSource.OnLocationChangedListener listener) {
+        if (mlocationClient == null) {
+            mlocationClient = new AMapLocationClient(this);
+            mLocationOption = getDefaultOption();
+            //设置定位监听
+            mlocationClient.setLocationListener(locationListener);
+            //设置为高精度定位模式
+            mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
+            //设置定位参数
+            mlocationClient.setLocationOption(mLocationOption);
+            // mlocationOption
+            // 此方法为每隔固定时间会发起一次定位请求，为了减少电量消耗或网络流量消耗，
+            // 注意设置合适的定位时间的间隔（最小间隔支持为2000ms），并且在合适时间调用stopLocation()方法来取消定位请求
+            // 在定位结束后，在合适的生命周期调用onDestroy()方法
+            // 在单次定位情况下，定位无论成功与否，都无需调用stopLocation()方法移除请求，定位sdk内部会移除
+            //            mlocationClient.startLocation();
+        }
+    }
+
+    /**
+     * 定位监听
+     */
+    AMapLocationListener locationListener = new AMapLocationListener() {
+        @Override
+        public void onLocationChanged(AMapLocation amapLocation) {
+            if (amapLocation != null) {
+                if (amapLocation != null
+                        && amapLocation.getErrorCode() == 0) {
+                    myLastLocation = amapLocation;
+                }
+            } else {
+                String errText = "定位失败,请检查网络或者GPS定位功能是否打开";
+                Log.e("AmapErr", errText);
+            }
+        }
+    };
+
+    /**
+     * 方法必须重写
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mlocationClient = new AMapLocationClient(this);
+        mLocationOption = getDefaultOption();
+    }
+
+    /**
+     * 方法必须重写
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        deactivate();
+
+    }
+
+    /**
+     * 方法必须重写
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    /**
+     * 方法必须重写
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (null != mlocationClient) {
+            mlocationClient.onDestroy();
+        }
+    }
+
+    /**
+     * 停止定位
+     */
+    @Override
+    public void deactivate() {
+        if (mlocationClient != null) {
+            mlocationClient.stopLocation();
+            mlocationClient.onDestroy();
+        }
+        mlocationClient = null;
     }
 }
 

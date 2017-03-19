@@ -1,8 +1,5 @@
 <component name="libraryTable">
   <library name="rules-0.5">
-    <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/annotations.zip!/" />
-    </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.android/build-cache/fed88e96bf007c122ef4e91859ee2d044ce72a46/output/res" />
       <root url="jar://$USER_HOME$/.android/build-cache/fed88e96bf007c122ef4e91859ee2d044ce72a46/output/jars/classes.jar!/" />

@@ -140,13 +140,14 @@
         android:padding="@dimen/normal_space" >
 
         <TextView
+            android:id="@+id/go_map_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:drawableLeft="@drawable/android_smaller"
             android:drawablePadding="3dp"
             android:gravity="center_vertical"
-            android:text="找好友"
+            android:text="查看地图"
             android:textSize="@dimen/text_size_default"
             android:textColor="@color/black"/>
 

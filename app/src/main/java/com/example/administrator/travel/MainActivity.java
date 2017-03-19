@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
     private DemoAdapter2 adapter2;
     private int maxSelectNum = 20;
     private ImageView mHeadImage;
-    private TextView mNameText;
+    private TextView mNameText,mGomapBtn;
     private String Url;
     private boolean mFlag = false;
     private String mName;
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity
 //        button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
         button4 = (Button) findViewById(R.id.button4);
-
+        mGomapBtn=(TextView) findViewById(R.id.go_map_btn);
         mNameText = (TextView) findViewById(R.id.login_remind);
         mSeetingText = (TextView) findViewById(R.id.me_item_1);
         mWeatherText = (TextView) findViewById(R.id.me_item_2);
@@ -488,7 +488,13 @@ public class MainActivity extends AppCompatActivity
                             startActivity(mIntent);
                         }
                     });
-
+                    mGomapBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent mIntent = new Intent(MainActivity.this, NaviActivity.class);
+                            startActivity(mIntent);
+                        }
+                    });
                     mWeatherText.setOnClickListener(new View.OnClickListener()
                     {
                         @Override

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/buttonGroup"
-        android:layout_below="@+id/search_bar_layout">
+       >
 
         <com.amap.api.maps.MapView
             android:id="@+id/map"
@@ -185,6 +185,7 @@
 
             <Button
                 android:id="@+id/topInfoBtn"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"
                 android:layout_alignParentLeft="true"

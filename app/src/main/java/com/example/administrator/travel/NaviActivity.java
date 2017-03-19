@@ -96,7 +96,7 @@ public class NaviActivity extends Activity implements LocationSource,
     private LinearLayout search_header, buttonGroup, point_result;
     private TextView searchBtn;
     private String keyWord = "";// 要输入的poi搜索关键字
-    private String editCity = "中国";// 要输入的城市名字或者城市区号
+    private String editCity = "青岛";// 要输入的城市名字或者城市区号
     private PoiResult poiResult; // poi返回的结果
     private int currentPage = 0;// 当前页面，从0开始计数
     private PoiSearch.Query query;// Poi查询条件类
