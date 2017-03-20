@@ -16,6 +16,7 @@ import com.example.administrator.travel.MainActivity;
 import com.example.administrator.travel.MyService;
 import com.example.administrator.travel.R;
 import com.example.administrator.travel.RemarkListAdapter;
+import com.example.administrator.travel.RemarkRequest;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
@@ -50,9 +51,9 @@ public class MainIntoActivity2 extends AppCompatActivity
         loadImage(url_Summer, mSummer);
         System.out.println("图片接收成功");
 
-        String picName = url_Summer.split("/")[url_Summer.split("/").length - 1];
+        final String picName = url_Summer.split("/")[url_Summer.split("/").length - 1];
 
-        ObjectSender ObjectSender = new ObjectSender(new GetRemarkRequest(picName));
+        final ObjectSender ObjectSender = new ObjectSender(new GetRemarkRequest(picName));
         ObjectSender.start();
 
 
@@ -102,6 +103,10 @@ public class MainIntoActivity2 extends AppCompatActivity
             public void onClick(View view)
             {
                 //发送信息
+                RemarkRequest remarkRequest = new RemarkRequest(picName,MainActivity.mainActivity.getUserName(),editText.getText().toString());
+                ObjectSender os = new ObjectSender(remarkRequest);
+                os.start();
+
 
                 //发送信息
 
