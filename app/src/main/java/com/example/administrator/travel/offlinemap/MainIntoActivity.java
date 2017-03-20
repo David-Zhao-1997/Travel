@@ -40,6 +40,7 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
     private ImageView mWinter;
     private Button mButton;
     private TextView desctiption;
+    private String des;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -86,7 +87,7 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
         String url_des = url.replace("-win.png", ".txt");
         DesFetch fetch = new DesFetch(url_des);
         fetch.start();
-        String des = null;
+        des = null;
         while ((des = fetch.getDes()) == null)
         {
 //            try
@@ -98,7 +99,7 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
 //                e.printStackTrace();
 //            }
         }
-        desctiption.setText(des);
+        desctiption.setText(des.split("xxx")[0]);
 //        desctiption.setText("hehe");
     }
 
@@ -210,9 +211,9 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
         bundle.putDouble("startLocation_latitude", myLastLocation.getLatitude());
         bundle.putDouble("startLocation_longitude", myLastLocation.getLongitude());
         bundle.putString("startAdName", myLastLocation.getAddress() + "附近");
-        bundle.putDouble("endLocation_latitude", 36.05336665);
-        bundle.putDouble("endLocation_longitude", 120.35115838);
-        bundle.putString("endAdName", "八大关附近");
+        bundle.putDouble("endLocation_latitude", Double.parseDouble(des.split("xxx")[1]));
+        bundle.putDouble("endLocation_longitude", Double.parseDouble(des.split("xxx")[2]));
+        bundle.putString("endAdName", des.split("xxx")[3]);
         intent.putExtras(bundle);
         startActivity(intent);
     }
