@@ -17,7 +17,7 @@ public class MyService extends Service
 {
     private XStream xStream = new XStream(new DomDriver());
     private DataOutputStream dos = null;
-    private Socket socket = null;
+    public static Socket socket = null;
     private Socket socket1 = null;
 
 
@@ -43,11 +43,10 @@ public class MyService extends Service
     @Override
     public int onStartCommand(Intent intent, int flags, int startId)
     {
+        System.out.println("启动服务");
         int msg = intent.getIntExtra("MSG", 0);
         if (msg == 1)//对象发送
         {
-
-
             Object obj = intent.getSerializableExtra("obj");
 //        LoginRequest loginRequest = new LoginRequest();
 //        Object obj = (Object)loginRequest;
@@ -101,6 +100,10 @@ public class MyService extends Service
 
             return super.onStartCommand(intent, flags, startId);
         }
+        else
+        {
+            System.out.println("不知道你想干嘛");
+        }
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -143,6 +146,7 @@ public class MyService extends Service
                 {
 //                    XStream xStream = new XStream(new DomDriver());
                     dis = new DataInputStream(socket.getInputStream());
+                    System.out.println("得到输入流");
                     String s = dis.readUTF();
                     Object object = xStream.fromXML(s);
                     if (object instanceof TextMessage)
@@ -176,6 +180,13 @@ public class MyService extends Service
                         PicInfo picInfo = MainActivity.mainActivity.LikeMap.get("shilaoren-win.png");
                         System.out.println("likeNum:"+picInfo.likeNum);
                         System.out.println("flag:"+picInfo.flag);
+                    }
+                    else if(object instanceof GetRemarkReply)
+                    {
+                        System.out.println("接收到评论回复");
+                        GetRemarkReply getRemarkReply = (GetRemarkReply) object;
+                        MainActivity.mainActivity.remarkItems = getRemarkReply.remarkList;
+                        System.out.println("赋值成功:"+MainActivity.mainActivity.remarkItems);
                     }
                     else
                     {

@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
 {
     public static MainActivity mainActivity;
     public HashMap<String,PicInfo> LikeMap;
+    public ArrayList<RemarkItem> remarkItems;
     private ArrayList<String> images = new ArrayList<>();
     private ArrayList<String> urls = new ArrayList<>();
     private RecyclerView recyclerView;
