@@ -639,19 +639,19 @@ public class MainActivity extends AppCompatActivity
             System.out.println("if1");
             images = (ArrayList<String>) data.getSerializableExtra(ImageSelectorActivity.REQUEST_OUTPUT);
             getImage(images);
-            if (images.size() != 1 && images != null)
-            {
-                System.out.println("if2");
-                Intent mIntent = new Intent(MainActivity.this, MyService.class);
-                mIntent.putExtra("MSG", 2);
-                for (int i = 0; i < urls.size(); i++)
-                {
-                    mIntent.putExtra("MSG", 2);
-                    mIntent.putExtra("url", urls.get(i));
-                    System.out.println(urls.get(i));
-                    startService(mIntent);
-                }
-            }
+//            if (images.size() != 1 && images != null)
+//            {
+//                System.out.println("if2");
+//                Intent mIntent = new Intent(MainActivity.this, MyService.class);
+//                mIntent.putExtra("MSG", 2);
+//                for (int i = 0; i < urls.size(); i++)
+//                {
+//                    mIntent.putExtra("MSG", 2);
+//                    mIntent.putExtra("url", urls.get(i));
+//                    System.out.println(urls.get(i));
+//                    startService(mIntent);
+//                }
+//            }
         }
     }
 
