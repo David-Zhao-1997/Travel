@@ -83,7 +83,7 @@ public class MainIntoActivity2 extends AppCompatActivity
         MainActivity.mainActivity.remarkItems = null;
 
         remarkBar = (RelativeLayout) findViewById(R.id.remarkBar);
-        editText = (EditText)findViewById(R.id.remarkInput);
+        editText = (EditText) findViewById(R.id.remarkInput);
         Button remarkButton = (Button) findViewById(R.id.remark);
         sendButton = (Button) findViewById(R.id.sendButton);
         remarkButton.setOnClickListener(new View.OnClickListener()
@@ -103,7 +103,7 @@ public class MainIntoActivity2 extends AppCompatActivity
             public void onClick(View view)
             {
                 //发送信息
-                RemarkRequest remarkRequest = new RemarkRequest(picName,MainActivity.mainActivity.getUserName(),editText.getText().toString());
+                RemarkRequest remarkRequest = new RemarkRequest(picName, MainActivity.mainActivity.getUserName(), editText.getText().toString());
                 ObjectSender os = new ObjectSender(remarkRequest);
                 os.start();
 
