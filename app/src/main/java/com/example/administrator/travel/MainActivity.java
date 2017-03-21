@@ -630,19 +630,19 @@ public class MainActivity extends AppCompatActivity
             System.out.println("if1");
             images = (ArrayList<String>) data.getSerializableExtra(ImageSelectorActivity.REQUEST_OUTPUT);
             getImage(images);
-            if (images.size() != 1 && images != null)
-            {
-                System.out.println("if2");
-                Intent mIntent = new Intent(MainActivity.this, MyService.class);
-                mIntent.putExtra("MSG", 2);
-                for (int i = 0; i < urls.size(); i++)
-                {
-                    mIntent.putExtra("MSG", 2);
-                    mIntent.putExtra("url", urls.get(i));
-                    System.out.println(urls.get(i));
-                    startService(mIntent);
-                }
-            }
+//            if (images.size() != 1 && images != null)
+//            {
+//                System.out.println("if2");
+//                Intent mIntent = new Intent(MainActivity.this, MyService.class);
+//                mIntent.putExtra("MSG", 2);
+//                for (int i = 0; i < urls.size(); i++)
+//                {
+//                    mIntent.putExtra("MSG", 2);
+//                    mIntent.putExtra("url", urls.get(i));
+//                    System.out.println(urls.get(i));
+//                    startService(mIntent);
+//                }
+//            }
         }
     }
 
@@ -650,8 +650,8 @@ public class MainActivity extends AppCompatActivity
         if (images.size() == 1) {
             File mfile = new File(images.get(0));
             Url = getUrl(mfile);
-            if (mFlag == true) {
-                Url = getUrl(mfile);
+            if (mFlag == true) {//头像，写入文件
+                Url = getUrl_forhead(mfile);
                 Bitmap bmBitmap = null;
                 try {
                     writetext();
@@ -659,8 +659,8 @@ public class MainActivity extends AppCompatActivity
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Bitmap mbitmap = toRoundBitmap(bmBitmap);
-                mHeadImage.setImageBitmap(mbitmap);
+                Bitmap mbitmap = toRoundBitmap(bmBitmap);//头像扁圆
+                mHeadImage.setImageBitmap(mbitmap);//显示头像
             }
         } else {
             for (int i = 0; i < images.size(); i++) {
@@ -671,12 +671,12 @@ public class MainActivity extends AppCompatActivity
         if(images.size()!=1&&images.size()!=0) {
             Intent mIntent=new Intent(MainActivity.this,MyService.class);
             mIntent.putExtra("MSG",2);
-            for(int i=0;i<urls.size();i++){
+            for(int i=0;i<urls.size();i++){//分享图片
                 mIntent.putExtra("MSG",2);
                 mIntent.putExtra("url",urls.get(i));
                 startService(mIntent);
             }
-        }else if(images.size()==1){
+        }else if(images.size()==1){//传送头像
             Intent mIntent=new Intent(MainActivity.this,MyService.class);
             mIntent.putExtra("MSG",2);
             mIntent.putExtra("url",Url);
@@ -731,7 +731,21 @@ public class MainActivity extends AppCompatActivity
         String Str = oldfile.getParent() + "/" + username + "_" + timeStr + ".png";
         return Str;
     }
-
+    public String getUrl_forhead(File oldfile)
+    {
+        //获取当前时间
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+        Date curDate = new Date(System.currentTimeMillis());
+        String timeStr = formatter.format(curDate);
+        //获取当前用户名
+        SharedPreferences sharedPreferences1 = getSharedPreferences(
+                "user_config", Context.MODE_PRIVATE);
+        String username = sharedPreferences1.getString("username", null);
+        System.out.println("获取成功：" + username);
+        copyFile(oldfile.getAbsolutePath(), oldfile.getParent() + "/" + username + "_" + timeStr + "head.png");
+        String Str = oldfile.getParent() + "/" + username + "_" + "icon.png";
+        return Str;
+    }
     /**
      * 转换图片成圆形
      *
