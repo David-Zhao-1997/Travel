@@ -25,7 +25,7 @@
             android:paddingLeft="3dp" >
 
             <TextView
-                android:id="@+id/name_label"
+                android:id="@+id/login_remind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
