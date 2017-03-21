@@ -23,6 +23,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -65,9 +66,9 @@ public class MainActivity extends AppCompatActivity
     private Button mButton;
     private ArrayList<String> uploadList = new ArrayList<>();
 
-    Button button1;
-    Button button3;
-    Button button4;
+    ImageButton button1;
+    ImageButton button3;
+    ImageButton button4;
     LinearLayout buttomBar;
     float x1 = 0;
     float x2 = 0;
@@ -194,10 +195,10 @@ public class MainActivity extends AppCompatActivity
 
     private void findView()
     {
-        button1 = (Button) findViewById(R.id.button1);
+        button1 = (ImageButton) findViewById(R.id.button1);
 //        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button4 = (Button) findViewById(R.id.button4);
+        button3 = (ImageButton) findViewById(R.id.button3);
+        button4 = (ImageButton) findViewById(R.id.button4);
         mGomapBtn=(TextView) findViewById(R.id.go_map_btn);
         mNameText = (TextView) findViewById(R.id.login_remind);
         mGoFeedbackBtn=(TextView)findViewById(R.id.feedback_btn);

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <include layout="@layout/index_my_list1" />
+        <include layout="@layout/footstep_listone" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +49,7 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -58,10 +58,11 @@
             android:layout_weight="1"
             android:background="#FFE3E3E3"
             android:text="景点"
+            android:src="@drawable/home"
             android:textColor="#515658"
             android:textSize="18sp" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -70,10 +71,11 @@
             android:layout_weight="1"
             android:background="#FFE3E3E3"
             android:text="足迹"
+            android:src="@drawable/foot"
             android:textColor="#515658"
             android:textSize="18sp" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -82,6 +84,7 @@
             android:layout_weight="1"
             android:background="#FFE3E3E3"
             android:text="个人中心"
+            android:src="@drawable/personal"
             android:textColor="#515658"
             android:textSize="18sp" />
 

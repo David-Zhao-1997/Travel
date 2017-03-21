@@ -38,7 +38,7 @@ public class MainIntoActivity2 extends AppCompatActivity
     private RelativeLayout remarkBar;
     private EditText editText;
     private static String url_Summer;
-    String url = "http://www.davidzhao.cn/pic/badaguan-win.png";
+//    String url = "http://www.davidzhao.cn/pic/badaguan-win.png";
     private Button sendButton;
 
     @Override
