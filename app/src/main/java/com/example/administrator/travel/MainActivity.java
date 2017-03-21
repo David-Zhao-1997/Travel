@@ -47,7 +47,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity
 {
     public static MainActivity mainActivity;
-    public HashMap<String,PicInfo> LikeMap;
+    public HashMap<String, PicInfo> LikeMap;
     public ArrayList<RemarkItem> remarkItems;
     private ArrayList<String> images = new ArrayList<>();
     private ArrayList<String> urls = new ArrayList<>();
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
     private int maxSelectNum = 20;
     private ImageView mHeadImage;
     private LinearLayout mGoLoginBtn;
-    private TextView mNameText,mGomapBtn,mGoaboutBtn,mGoFeedbackBtn;
+    private TextView mNameText, mGomapBtn, mGoaboutBtn, mGoFeedbackBtn;
     private String Url;
     private boolean mFlag = false;
     private String mName;
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity
         bundle.putSerializable("obj", new GetLikeInfoRequest(username));
         Intent intent = new Intent(MainActivity.this, MyService.class);
         intent.putExtras(bundle);
-        intent.putExtra("MSG",1);
+        intent.putExtra("MSG", 1);
         startService(intent);
     }
 
@@ -122,8 +122,6 @@ public class MainActivity extends AppCompatActivity
         String username = sharedPreferences1.getString("username", null);
         return username;
     }
-
-
 
 
     public void startAct(Intent intent)
@@ -174,6 +172,7 @@ public class MainActivity extends AppCompatActivity
         }
         return list;
     }
+
     public ArrayList<String> getData2()
     {
 //        ArrayList<String> list = new ArrayList<>();
@@ -199,11 +198,11 @@ public class MainActivity extends AppCompatActivity
 //        button2 = (Button) findViewById(R.id.button2);
         button3 = (ImageButton) findViewById(R.id.button3);
         button4 = (ImageButton) findViewById(R.id.button4);
-        mGomapBtn=(TextView) findViewById(R.id.go_map_btn);
+        mGomapBtn = (TextView) findViewById(R.id.go_map_btn);
         mNameText = (TextView) findViewById(R.id.login_remind);
-        mGoFeedbackBtn=(TextView)findViewById(R.id.feedback_btn);
-        mGoaboutBtn=(TextView)findViewById(R.id.about_btn);
-        mGoLoginBtn=(LinearLayout)findViewById(R.id.login_btn);
+        mGoFeedbackBtn = (TextView) findViewById(R.id.feedback_btn);
+        mGoaboutBtn = (TextView) findViewById(R.id.about_btn);
+        mGoLoginBtn = (LinearLayout) findViewById(R.id.login_btn);
         mSeetingText = (TextView) findViewById(R.id.me_item_1);
         mWeatherText = (TextView) findViewById(R.id.me_item_2);
         mHeadImage = (ImageView) findViewById(R.id.index_my_list1_headphoto);
@@ -253,7 +252,7 @@ public class MainActivity extends AppCompatActivity
         bundle.putSerializable("obj", new PicRequest());
         Intent intent = new Intent(MainActivity.this, MyService.class);
         intent.putExtras(bundle);
-        intent.putExtra("MSG",1);
+        intent.putExtra("MSG", 1);
         startService(intent);
         System.out.println(s);
 
@@ -359,7 +358,7 @@ public class MainActivity extends AppCompatActivity
                     bundle.putSerializable("obj", new PicRequest());
                     Intent intent = new Intent(MainActivity.this, MyService.class);
                     intent.putExtras(bundle);
-                    intent.putExtra("MSG",1);
+                    intent.putExtra("MSG", 1);
                     startService(intent);
                     System.out.println(s);
 
@@ -494,23 +493,29 @@ public class MainActivity extends AppCompatActivity
                             startActivity(mIntent);
                         }
                     });
-                    mGomapBtn.setOnClickListener(new View.OnClickListener() {
+                    mGomapBtn.setOnClickListener(new View.OnClickListener()
+                    {
                         @Override
-                        public void onClick(View v) {
+                        public void onClick(View v)
+                        {
                             Intent mIntent = new Intent(MainActivity.this, NaviActivity.class);
                             startActivity(mIntent);
                         }
                     });
-                    mSeetingText.setOnClickListener(new View.OnClickListener() {
+                    mSeetingText.setOnClickListener(new View.OnClickListener()
+                    {
                         @Override
-                        public void onClick(View v) {
+                        public void onClick(View v)
+                        {
                             Intent mIntent = new Intent(MainActivity.this, SettingClass.class);
                             startActivity(mIntent);
                         }
                     });
-                    mGoLoginBtn.setOnClickListener(new View.OnClickListener() {
+                    mGoLoginBtn.setOnClickListener(new View.OnClickListener()
+                    {
                         @Override
-                        public void onClick(View v) {
+                        public void onClick(View v)
+                        {
                             Intent mIntent = new Intent(MainActivity.this, LoginActivity.class);
                             startActivity(mIntent);
                             //从这里写登录代码
@@ -522,21 +527,25 @@ public class MainActivity extends AppCompatActivity
                         public void onClick(View view)
                         {
                             System.out.println("mWeatherText");
-                            Intent intent = new Intent(MainActivity.this,WeatherSearchActivity.class);
+                            Intent intent = new Intent(MainActivity.this, WeatherSearchActivity.class);
                             startActivity(intent);
                         }
                     });
-                    mGoFeedbackBtn.setOnClickListener(new View.OnClickListener() {
+                    mGoFeedbackBtn.setOnClickListener(new View.OnClickListener()
+                    {
                         @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this,Feedback.class);
+                        public void onClick(View v)
+                        {
+                            Intent intent = new Intent(MainActivity.this, Feedback.class);
                             startActivity(intent);
                         }
                     });
-                    mGoaboutBtn.setOnClickListener(new View.OnClickListener() {
+                    mGoaboutBtn.setOnClickListener(new View.OnClickListener()
+                    {
                         @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this,About.class);
+                        public void onClick(View v)
+                        {
+                            Intent intent = new Intent(MainActivity.this, About.class);
                             startActivity(intent);
                         }
                     });
@@ -591,7 +600,7 @@ public class MainActivity extends AppCompatActivity
             }
             else if (obj instanceof PicReply)
             {
-                PicReply picReply= (PicReply) obj;
+                PicReply picReply = (PicReply) obj;
                 uploadList = picReply.getFilelist();
                 System.out.println("图片列表获取成功");
             }
@@ -646,40 +655,53 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    public void getImage(ArrayList<String> images) {
-        if (images.size() == 1) {
+    public void getImage(ArrayList<String> images)
+    {
+        if (images.size() == 1)
+        {
             File mfile = new File(images.get(0));
             Url = getUrl(mfile);
-            if (mFlag == true) {
+            if (mFlag == true)
+            {
                 Url = getUrl(mfile);
                 Bitmap bmBitmap = null;
-                try {
+                try
+                {
                     writetext();
                     bmBitmap = BitmapFactory.decodeFile(readtext());
-                } catch (IOException e) {
+                }
+                catch (IOException e)
+                {
                     e.printStackTrace();
                 }
                 Bitmap mbitmap = toRoundBitmap(bmBitmap);
                 mHeadImage.setImageBitmap(mbitmap);
             }
-        } else {
-            for (int i = 0; i < images.size(); i++) {
+        }
+        else
+        {
+            for (int i = 0; i < images.size(); i++)
+            {
                 File mfile = new File(images.get(i));
                 urls.add(getUrl(mfile));
             }
         }
-        if(images.size()!=1&&images.size()!=0) {
-            Intent mIntent=new Intent(MainActivity.this,MyService.class);
-            mIntent.putExtra("MSG",2);
-            for(int i=0;i<urls.size();i++){
-                mIntent.putExtra("MSG",2);
-                mIntent.putExtra("url",urls.get(i));
+        if (images.size() != 1 && images.size() != 0)
+        {
+            Intent mIntent = new Intent(MainActivity.this, MyService.class);
+            mIntent.putExtra("MSG", 2);
+            for (int i = 0; i < urls.size(); i++)
+            {
+                mIntent.putExtra("MSG", 2);
+                mIntent.putExtra("url", urls.get(i));
                 startService(mIntent);
             }
-        }else if(images.size()==1){
-            Intent mIntent=new Intent(MainActivity.this,MyService.class);
-            mIntent.putExtra("MSG",2);
-            mIntent.putExtra("url",Url);
+        }
+        else if (images.size() == 1)
+        {
+            Intent mIntent = new Intent(MainActivity.this, MyService.class);
+            mIntent.putExtra("MSG", 2);
+            mIntent.putExtra("url", Url);
             System.out.println(Url);
             startService(mIntent);
         }
