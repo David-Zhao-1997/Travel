@@ -326,7 +326,7 @@ public class RestRouteShowActivity extends Activity implements AMapNaviListener
                 setTraffic();
                 break;
             case R.id.backBtn:
-                Intent mIntent = new Intent(RestRouteShowActivity.this, MainActivity.class);
+                Intent mIntent = new Intent(RestRouteShowActivity.this,NaviActivity.class);
                 startActivity(mIntent);
                 finish();
                 break;

@@ -110,6 +110,11 @@
             android:layout_height="wrap_content"
             android:src="@drawable/hui_discount_item_rule_arrow" />
     </LinearLayout>
+    <View
+        android:layout_marginLeft="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/normal_bg_color" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
