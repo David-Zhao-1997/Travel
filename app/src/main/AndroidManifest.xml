@@ -29,16 +29,17 @@
             android:value="321ee354a44969e2d7ac4984dd4b680d" />
 
         <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".LoadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" />
-        <activity android:name=".LoadActivity" />
         <activity android:name=".RegisterActivity" />
 
         <service
