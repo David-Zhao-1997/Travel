@@ -16,8 +16,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Travel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,59 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main_into2.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_into2.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1316">
-              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="770" column="5" selection-start-line="770" selection-start-column="5" selection-end-line="770" selection-end-column="5" />
-              <folding>
-                <element signature="e#4310#4311#0" expanded="true" />
-                <element signature="e#4347#4348#0" expanded="true" />
-                <element signature="e#9099#9100#0" expanded="true" />
-                <element signature="e#9123#9124#0" expanded="true" />
-                <element signature="e#14722#15332#0" expanded="true" />
-                <element signature="e#15331#15332#0" expanded="true" />
-                <element signature="e#17236#17533#0" expanded="true" />
-                <element signature="e#17532#17533#0" expanded="true" />
-                <element signature="e#17586#18013#0" expanded="true" />
-                <element signature="e#18012#18013#0" expanded="true" />
-                <element signature="e#18065#18421#0" expanded="true" />
-                <element signature="e#18420#18421#0" expanded="true" />
-                <element signature="e#18476#18832#0" expanded="true" />
-                <element signature="e#18831#18832#0" expanded="true" />
-                <element signature="e#18886#19282#0" expanded="true" />
-                <element signature="e#19281#19282#0" expanded="true" />
-                <element signature="e#19337#19767#0" expanded="true" />
-                <element signature="e#19766#19767#0" expanded="true" />
-                <element signature="e#19824#20174#0" expanded="true" />
-                <element signature="e#20173#20174#0" expanded="true" />
-                <element signature="e#20228#20575#0" expanded="true" />
-                <element signature="e#20574#20575#0" expanded="true" />
-                <element signature="e#22719#22720#0" expanded="true" />
-                <element signature="e#22768#22769#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RemarkRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="-392">
+              <caret line="751" column="69" selection-start-line="751" selection-start-column="69" selection-end-line="751" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -122,10 +79,14 @@
       <file leaf-file-name="RemarkListAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+            <state relative-caret-position="3444">
+              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2701#2702#0" expanded="true" />
+                <element signature="e#2753#2754#0" expanded="true" />
+                <element signature="e#3702#3961#0" expanded="true" />
+                <element signature="e#3960#3961#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,21 +94,21 @@
       </file>
       <file leaf-file-name="activity_about.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
               <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="Me.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/Me.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2128">
+            <state relative-caret-position="726">
               <caret line="106" column="69" selection-start-line="106" selection-start-column="69" selection-end-line="106" selection-end-column="69" />
               <folding />
             </state>
@@ -156,26 +117,23 @@
       </file>
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
+            <state relative-caret-position="693">
               <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ImageSelectorActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/com/yongchun/library/view/ImageSelectorActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5236">
-              <caret line="220" column="17" selection-start-line="220" selection-start-column="17" selection-end-line="220" selection-end-column="17" />
-              <folding>
-                <element signature="e#10142#10143#0" expanded="true" />
-                <element signature="e#10197#10198#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1044">
+              <caret line="248" column="16" selection-start-line="254" selection-start-column="36" selection-end-line="254" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,11 +141,21 @@
       <file leaf-file-name="MyService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1988">
-              <caret line="82" column="32" selection-start-line="70" selection-start-column="7" selection-end-line="82" selection-end-column="32" />
+            <state relative-caret-position="-2802">
+              <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainIntoActivity2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1589">
+              <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="217" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2843,12 +2811,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MyService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/DeleteRemarkRequest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity2.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/Footstep.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/Me.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java" />
       </list>
     </option>
   </component>
@@ -2869,7 +2837,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -2882,17 +2850,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -2901,7 +2859,7 @@
     <property name="last_opened_file_path" value="D:/MyApplication10" />
     <property name="device.picker.selection" value="ZX1G42798C" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="MySer&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/MyService.java&#10;Man&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/AndroidManifest.xml&#10;Adapter&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java&#10;Maina&#9;PSI&#9;JAVA://com.example.administrator.travel.MainActivity&#10;Ser&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/MyService.java&#10;Adap&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/DemoAdapter.java&#10;Mainintoa&#9;PSI&#9;JAVA://com.example.administrator.travel.offlinemap.MainIntoActivity2&#10;maininto&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity.java&#10;mani&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/AndroidManifest.xml&#10;main&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/MainActivity.java&#10;manif&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel-2.25.3/Travel/app/src/main/AndroidManifest.xml&#10;Demoa&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel-2.25.3/Travel/app/src/main/java/com/example/administrator/travel/DemoAdapter2.java&#10;Dem&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel-2.25.3/Travel/app/src/main/java/com/example/administrator/travel/DemoAdapter2.java&#10;mainin&#9;PSI&#9;JAVA://com.example.administrator.travel.offlinemap.MainIntoActivity" />
+    <property name="SearchEverywhereHistoryKey" value="Adapter&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java&#10;MySer&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/MyService.java&#10;Man&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/AndroidManifest.xml&#10;Maina&#9;PSI&#9;JAVA://com.example.administrator.travel.MainActivity&#10;Ser&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/MyService.java&#10;Adap&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/DemoAdapter.java&#10;Mainintoa&#9;PSI&#9;JAVA://com.example.administrator.travel.offlinemap.MainIntoActivity2&#10;maininto&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity.java&#10;mani&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/AndroidManifest.xml&#10;main&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel1/app/src/main/java/com/example/administrator/travel/MainActivity.java&#10;manif&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel-2.25.3/Travel/app/src/main/AndroidManifest.xml&#10;Demoa&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel-2.25.3/Travel/app/src/main/java/com/example/administrator/travel/DemoAdapter2.java&#10;Dem&#9;FILE&#9;file://C:/Users/Administrator/Desktop/Travel-2.25.3/Travel/app/src/main/java/com/example/administrator/travel/DemoAdapter2.java&#10;mainin&#9;PSI&#9;JAVA://com.example.administrator.travel.offlinemap.MainIntoActivity" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlEditorPanel.WIDTH" value="309" />
   </component>
   <component name="RecentsManager">
@@ -3421,7 +3379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490098028908</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="增加了头像不同的命名方式">
+      <created>1490112211749</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1490112211749</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3434,7 +3399,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.49570817" order="6" side_tool="false" content_ui="tabs" />
@@ -3443,7 +3408,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.50429183" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6028202" sideWeight="0.49356222" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8415493" sideWeight="0.49356222" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886267" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6690141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274648" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3451,6 +3417,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21459228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3467,8 +3434,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886267" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -3508,7 +3473,8 @@
     <MESSAGE value="Like Button" />
     <MESSAGE value="添加了评论查看功能 发送评论功能还要等一会" />
     <MESSAGE value="评论成功了 哈哈哈哈哈哈" />
-    <option name="LAST_COMMIT_MESSAGE" value="评论成功了 哈哈哈哈哈哈" />
+    <MESSAGE value="增加了头像不同的命名方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了头像不同的命名方式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3517,14 +3483,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-580">
@@ -3547,23 +3505,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/index_my.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_into.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_into.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -3607,13 +3565,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_load.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/PicReply.java">
@@ -3631,13 +3589,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_part.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/GetLikeInfoRequest.java">
@@ -3655,24 +3613,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-ldpi/ok.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/one.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/GetLikeInfoReply.java">
@@ -3731,13 +3689,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/remark_list.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="980">
           <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/GetRemarkRequest.java">
@@ -3751,19 +3709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
-          <folding>
-            <element signature="method#loadImage#0;class#MainIntoActivity2#0" expanded="false" />
-            <element signature="class#ObjectSender#0;class#MainIntoActivity2#0" expanded="false" />
-            <element signature="class#NetService#0;class#MainIntoActivity2#0" expanded="false" />
-            <element signature="method#getHttpBitmap#0;class#MainIntoActivity2#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3795,25 +3740,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/DemoAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4144">
-          <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_into2.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1316">
           <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkRequest.java">
@@ -3838,17 +3773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/yongchun/library/view/ImageSelectorActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="220" column="17" selection-start-line="220" selection-start-column="17" selection-end-line="220" selection-end-column="17" />
-          <folding>
-            <element signature="e#10142#10143#0" expanded="true" />
-            <element signature="e#10197#10198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/Footstep.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1288">
@@ -3859,86 +3783,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MyService.java">
+    <entry file="jar://$USER_HOME$/gradle-3.1-bin/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/24a0b0e63af9530bcedd06ed1983a4f2f02155a3/glide-3.7.0-sources.jar!/com/bumptech/glide/RequestManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1988">
-          <caret line="82" column="32" selection-start-line="70" selection-start-column="7" selection-end-line="82" selection-end-column="32" />
+        <state relative-caret-position="-2079">
+          <caret line="282" column="39" selection-start-line="282" selection-start-column="39" selection-end-line="282" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/DemoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="127" column="52" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/Me.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2128">
-          <caret line="106" column="69" selection-start-line="106" selection-start-column="69" selection-end-line="106" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/Me.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="106" column="69" selection-start-line="106" selection-start-column="69" selection-end-line="106" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+        <state relative-caret-position="-2802">
+          <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/yongchun/library/view/ImageSelectorActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="248" column="16" selection-start-line="254" selection-start-column="36" selection-end-line="254" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/offlinemap/MainIntoActivity2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1589">
+          <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="217" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/RemarkListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3444">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2753#2754#0" expanded="true" />
+            <element signature="e#3702#3961#0" expanded="true" />
+            <element signature="e#3960#3961#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/travel/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="770" column="5" selection-start-line="770" selection-start-column="5" selection-end-line="770" selection-end-column="5" />
-          <folding>
-            <element signature="e#4310#4311#0" expanded="true" />
-            <element signature="e#4347#4348#0" expanded="true" />
-            <element signature="e#9099#9100#0" expanded="true" />
-            <element signature="e#9123#9124#0" expanded="true" />
-            <element signature="e#14722#15332#0" expanded="true" />
-            <element signature="e#15331#15332#0" expanded="true" />
-            <element signature="e#17236#17533#0" expanded="true" />
-            <element signature="e#17532#17533#0" expanded="true" />
-            <element signature="e#17586#18013#0" expanded="true" />
-            <element signature="e#18012#18013#0" expanded="true" />
-            <element signature="e#18065#18421#0" expanded="true" />
-            <element signature="e#18420#18421#0" expanded="true" />
-            <element signature="e#18476#18832#0" expanded="true" />
-            <element signature="e#18831#18832#0" expanded="true" />
-            <element signature="e#18886#19282#0" expanded="true" />
-            <element signature="e#19281#19282#0" expanded="true" />
-            <element signature="e#19337#19767#0" expanded="true" />
-            <element signature="e#19766#19767#0" expanded="true" />
-            <element signature="e#19824#20174#0" expanded="true" />
-            <element signature="e#20173#20174#0" expanded="true" />
-            <element signature="e#20228#20575#0" expanded="true" />
-            <element signature="e#20574#20575#0" expanded="true" />
-            <element signature="e#22719#22720#0" expanded="true" />
-            <element signature="e#22768#22769#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-392">
+          <caret line="751" column="69" selection-start-line="751" selection-start-column="69" selection-end-line="751" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
