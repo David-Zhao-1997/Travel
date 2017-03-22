@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.administrator.travel.offlinemap.MainIntoActivity;
+import com.example.administrator.travel.offlinemap.MainIntoActivity2;
 
 import java.util.ArrayList;
 
@@ -105,7 +106,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
         {
             if (data != null)
             {
-                String text = (String) data;
+                final String text = (String) data;
                 final String final_text = text.split("/")[text.split("/").length - 1];
                 /*
                 加载点赞信息
@@ -177,6 +178,12 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
                         Toast.makeText(MainActivity.mainActivity, username + ":评论:" + final_text, Toast.LENGTH_SHORT).show();
+
+                        //region 启动评论
+                        Intent mintent = new Intent(MainActivity.mainActivity, MainIntoActivity2.class);
+                        mintent.putExtra("Summer", text);
+                        MainActivity.mainActivity.startActivity(mintent);
+                        //endregion
                     }
                 });
                 //TODO 这里需要重新设置监听器
