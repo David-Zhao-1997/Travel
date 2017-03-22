@@ -11,6 +11,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -76,6 +80,7 @@ public class RemarkListAdapter extends BaseAdapter
         {
             viewHolder.imageView.setImageBitmap(bitmap);
         }
+        new IconLoader(viewHolder).start();
         viewHolder.imageView.setTag(null);
         return view;
     }
@@ -87,4 +92,54 @@ public class RemarkListAdapter extends BaseAdapter
         public TextView remark;
     }
 
+    public class IconLoader extends Thread
+    {
+        ViewHolder viewHolder;
+
+        IconLoader(ViewHolder viewHolder)
+        {
+            this.viewHolder = viewHolder;
+        }
+
+        @Override
+        public void run()
+        {
+            URL myFileURL = null;
+            try
+            {
+                myFileURL = new URL("http://www.davidzhao.cn/icon/" + remarkItem.userName + "_icon.png");
+                //获得连接
+                HttpURLConnection conn = null;
+                conn = (HttpURLConnection) myFileURL.openConnection();
+                conn.setConnectTimeout(1000);
+                //连接设置获得数据流
+                conn.setDoInput(true);
+                //不使用缓存
+                conn.setUseCaches(true);
+                //这句可有可无，没有影响
+                conn.connect();
+                //得到数据流
+                InputStream is = conn.getInputStream();
+                //解析得到图片
+                final Bitmap bitmap = BitmapFactory.decodeStream(is);
+                //关闭数据流
+                is.close();
+                if (bitmap != null)
+                {
+                    MainActivity.mainActivity.runOnUiThread(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            viewHolder.imageView.setImageBitmap(bitmap);
+                        }
+                    });
+                }
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+    }
 }

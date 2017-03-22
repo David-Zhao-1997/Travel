@@ -32,7 +32,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Me extends AppCompatActivity {
+public class Me extends AppCompatActivity
+{
     private ArrayList<String> images = new ArrayList<>();
     private ArrayList<String> urls = new ArrayList<>();
     private int maxSelectNum = 20;
@@ -44,41 +45,50 @@ public class Me extends AppCompatActivity {
     private TextView mSeetingText, mWeatherText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index_my);
         mNameText = (TextView) findViewById(R.id.login_remind);
         mSeetingText = (TextView) findViewById(R.id.me_item_1);
         mWeatherText = (TextView) findViewById(R.id.me_item_2);
 
-        //显示昵称
+        //??????
         SharedPreferences sharedPreferences1 = getSharedPreferences(
                 "user_config", Context.MODE_PRIVATE);
         String username = sharedPreferences1.getString("username", null);
-        System.out.println("获取成功：" + username);
+        System.out.println("????????" + username);
         mName = username;
-        if (mName != null) {
+        if (mName != null)
+        {
             mNameText.setText(mName);
         }
 
-        //显示头像
         Bitmap bmBitmap = null;
-        try {
+        try
+        {
             bmBitmap = BitmapFactory.decodeFile(readtext());
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
 //        mHeadImage = (ImageView) findViewById(R.id.index_my_list1_headphoto);
-        if (bmBitmap != null) {
+        if (bmBitmap != null)
+        {
             Bitmap mbitmap = toRoundBitmap(bmBitmap);
             mHeadImage.setImageBitmap(mbitmap);
-        } else {
+        }
+        else
+        {
             mHeadImage.setImageResource(R.drawable.person_default);
         }
-        //头像选择
-        mHeadImage.setOnClickListener(new View.OnClickListener() {
+        //??????
+        mHeadImage.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 initView(2, true);
                 mFlag = true;
             }
@@ -86,38 +96,49 @@ public class Me extends AppCompatActivity {
 
     }
 
-    public void initView(int mode, boolean isCrop) {
-        //mode 1表示多选，2表示单
+    public void initView(int mode, boolean isCrop)
+    {
         boolean isShow = true;
         boolean isPreview = true;
         ImageSelectorActivity.start(Me.this, maxSelectNum, mode, isShow, isPreview, isCrop);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK && requestCode == ImageSelectorActivity.REQUEST_IMAGE) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (resultCode == RESULT_OK && requestCode == ImageSelectorActivity.REQUEST_IMAGE)
+        {
             images = (ArrayList<String>) data.getSerializableExtra(ImageSelectorActivity.REQUEST_OUTPUT);
             getImage(images);
         }
     }
 
-    public void getImage(ArrayList<String> images) {
-        if (images.size() == 1) {
+    public void getImage(ArrayList<String> images)
+    {
+        if (images.size() == 1)
+        {
             File mfile = new File(images.get(0));
-            if (mFlag == true) {
+            if (mFlag == true)
+            {
                 Url = getUrl(mfile);
                 Bitmap bmBitmap = null;
-                try {
+                try
+                {
                     writetext();
                     bmBitmap = BitmapFactory.decodeFile(readtext());
-                } catch (IOException e) {
+                }
+                catch (IOException e)
+                {
                     e.printStackTrace();
                 }
                 Bitmap mbitmap = toRoundBitmap(bmBitmap);
                 mHeadImage.setImageBitmap(mbitmap);
             }
-        } else {
-            for (int i = 0; i < images.size(); i++) {
+        }
+        else
+        {
+            for (int i = 0; i < images.size(); i++)
+            {
                 File mfile = new File(images.get(i));
                 urls.add(getUrl(mfile));
             }
@@ -125,56 +146,64 @@ public class Me extends AppCompatActivity {
 
     }
 
-    public void copyFile(String oldPath, String newPath) {
-        try {
+    public void copyFile(String oldPath, String newPath)
+    {
+        try
+        {
             int byteread = 0;
             File oldfile = new File(oldPath);
-            if (oldfile.exists()) { //文件存在时
-                InputStream inStream = new FileInputStream(oldPath); //读入原文件
+            if (oldfile.exists())
+            {
+                InputStream inStream = new FileInputStream(oldPath);
                 FileOutputStream fs = new FileOutputStream(newPath);
-                //建立缓冲区
+
                 byte[] buffer = new byte[1444];
-                while ((byteread = inStream.read(buffer)) != -1) {
+                while ((byteread = inStream.read(buffer)) != -1)
+                {
                     fs.write(buffer, 0, byteread);
                 }
                 inStream.close();
-                System.out.println("写入成功");
             }
-        } catch (Exception e) {
-            System.out.println("复制单个文件操作出错");
+        }
+        catch (Exception e)
+        {
+            System.out.println("??????????????????");
             e.printStackTrace();
 
         }
 
     }
 
-    public String getUrl(File oldfile) {
-        //获取当前时间
+    public String getUrl(File oldfile)
+    {
+
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
         Date curDate = new Date(System.currentTimeMillis());
         String timeStr = formatter.format(curDate);
-        //获取当前用户名
+        //???????????
         SharedPreferences sharedPreferences1 = getSharedPreferences(
                 "user_config", Context.MODE_PRIVATE);
         String username = sharedPreferences1.getString("username", null);
-        System.out.println("获取成功：" + username);
+        System.out.println("????????" + username);
         copyFile(oldfile.getAbsolutePath(), oldfile.getParent() + "/" + username + "_" + timeStr + ".png");
         String Str = oldfile.getParent() + "/" + username + "_" + timeStr + ".png";
         return Str;
     }
 
     /**
-     * 转换图片成圆形
+     * ??????????
      *
-     * @param bitmap 传入Bitmap对象
+     * @param bitmap ????Bitmap????
      * @return
      */
-    public Bitmap toRoundBitmap(Bitmap bitmap) {
+    public Bitmap toRoundBitmap(Bitmap bitmap)
+    {
         int width = 219;
         int height = 219;
         float roundPx;
         float left, top, right, bottom, dst_left, dst_top, dst_right, dst_bottom;
-        if (width <= height) {
+        if (width <= height)
+        {
             roundPx = width / 2;
 
             left = 0;
@@ -188,7 +217,9 @@ public class Me extends AppCompatActivity {
             dst_top = 0;
             dst_right = width;
             dst_bottom = width;
-        } else {
+        }
+        else
+        {
             roundPx = height / 2;
 
             float clip = (width - height) / 2;
@@ -213,47 +244,56 @@ public class Me extends AppCompatActivity {
         final Rect dst = new Rect((int) dst_left, (int) dst_top, (int) dst_right, (int) dst_bottom);
         final RectF rectF = new RectF(dst);
 
-        paint.setAntiAlias(true);// 设置画笔无锯齿
+        paint.setAntiAlias(true);
 
-        canvas.drawARGB(0, 0, 0, 0); // 填充整个Canvas
+        canvas.drawARGB(0, 0, 0, 0);
 
-        // 以下有两种方法画圆,drawRounRect和drawCircle
-        canvas.drawRoundRect(rectF, roundPx, roundPx, paint);// 画圆角矩形，第一个参数为图形显示区域，第二个参数和第三个参数分别是水平圆角半径和垂直圆角半径。
-        // canvas.drawCircle(roundPx, roundPx, roundPx, paint);
+        canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
 
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));// 设置两张图片相交时的模式,参考http://trylovecatch.iteye.com/blog/1189452
-        canvas.drawBitmap(bitmap, src, dst, paint); // 以Mode.SRC_IN模式合并bitmap和已经draw了的Circle
 
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, src, dst, paint);
         return output;
     }
 
-    public void writetext() throws IOException {
+    public void writetext() throws IOException
+    {
         File mfile = new File(Environment.getExternalStorageDirectory(), "apphistory.txt");
-        try {
+        try
+        {
             String counter = Url;
             OutputStream out = new FileOutputStream(mfile);
             out.write(counter.getBytes());
             out.close();
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e)
+        {
             e.printStackTrace();
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
     }
 
-    public String readtext() throws IOException {
+    public String readtext() throws IOException
+    {
         String mStr = "";
         File mfile = new File(Environment.getExternalStorageDirectory(), "apphistory.txt");
-        if (mfile.exists()) {
+        if (mfile.exists())
+        {
             FileInputStream fis = new FileInputStream(mfile.getAbsolutePath());
             DataInputStream dataIO = new DataInputStream(fis);
             String strLine = null;
-            while ((strLine = dataIO.readLine()) != null) {
+            while ((strLine = dataIO.readLine()) != null)
+            {
                 mStr += strLine;
             }
             dataIO.close();
             fis.close();
-        } else {
+        }
+        else
+        {
         }
         return mStr;
     }
