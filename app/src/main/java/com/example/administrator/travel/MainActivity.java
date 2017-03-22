@@ -765,7 +765,7 @@ public class MainActivity extends AppCompatActivity
                 "user_config", Context.MODE_PRIVATE);
         String username = sharedPreferences1.getString("username", null);
         System.out.println("获取成功：" + username);
-        copyFile(oldfile.getAbsolutePath(), oldfile.getParent() + "/" + username + "_" + timeStr + "head.png");
+        copyFile(oldfile.getAbsolutePath(), oldfile.getParent() + "/" + username + "_"+"icon.png");
         String Str = oldfile.getParent() + "/" + username + "_" + "icon.png";
         return Str;
     }
