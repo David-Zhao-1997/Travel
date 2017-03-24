@@ -104,7 +104,7 @@ public class DemoAdapter2 extends RecyclerView.Adapter<DemoAdapter2.BaseViewHold
         {
             if (data != null)
             {
-                String text = (String) data;
+                final String text = (String) data;
                 final String final_text = text.split("/")[text.split("/").length - 1];
                 /*
                 加载点赞信息
@@ -174,6 +174,10 @@ public class DemoAdapter2 extends RecyclerView.Adapter<DemoAdapter2.BaseViewHold
                         String username = sharedPreferences1.getString("username", null);
 //                        MainActivity.mainActivity.setContentView(R.layout.activity_remark);
                         Toast.makeText(MainActivity.mainActivity, username + ":评论:" + final_text, Toast.LENGTH_SHORT).show();
+
+                        Intent mintent = new Intent(MainActivity.mainActivity, MainIntoActivity2.class);
+                        mintent.putExtra("Summer", text);
+                        MainActivity.mainActivity.startActivity(mintent);
                     }
                 });
                 ivImage.setOnClickListener(new clikListener(text));
