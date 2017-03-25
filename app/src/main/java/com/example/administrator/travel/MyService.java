@@ -114,7 +114,7 @@ public class MyService extends Service
         {
             try
             {
-                socket = new Socket("118.89.238.39", 10000);
+                socket = new Socket("192.168.0.153", 10000);
 //                socket1 = new Socket("10.0.2.2", 10001);
                 System.out.println(socket);
                 ReadHandler rh = new ReadHandler();

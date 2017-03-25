@@ -210,6 +210,7 @@ public class MainActivity extends AppCompatActivity
         mNameText = (TextView) findViewById(R.id.login_remind);
         offMapText = (TextView) findViewById(R.id.off_map);
 
+
 //        send = (Button) findViewById(R.id.button);
 //        send.setOnClickListener(new View.OnClickListener()
 //        {
@@ -334,7 +335,6 @@ public class MainActivity extends AppCompatActivity
                     recyclerView = (RecyclerView) findViewById(R.id.recylerview);
                     recyclerView.setHasFixedSize(true);
 
-
                     recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
                     recyclerView.setAdapter(adapter = new DemoAdapter());
 
@@ -362,16 +362,13 @@ public class MainActivity extends AppCompatActivity
                     startService(intent);
                     System.out.println(s);
 
-
                     recyclerView2 = (RecyclerView) findViewById(R.id.recylerview1);
                     recyclerView2.setHasFixedSize(true);
-
 
                     recyclerView2.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
                     recyclerView2.setAdapter(adapter2 = new DemoAdapter2());
 
                     adapter2.replaceAll(getData2());
-
 
                     BottomBarListener bottomBarListener = new BottomBarListener();
                     button1.setOnTouchListener(bottomBarListener);

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context="com.example.administrator.travel.Feedback">
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/white"
+                                             tools:context="com.example.administrator.travel.Feedback">
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -39,7 +38,7 @@
             android:layout_below="@+id/edit_feedback"
             android:background="#FFE3E3E3"
             android:textColor="@color/bar_grey_90"
-            android:text="联系我们"
+            android:text="@string/ContactUs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     <Button
@@ -47,7 +46,7 @@
         android:layout_below="@+id/edit_feedback"
         android:background="#FFE3E3E3"
         android:textColor="@color/bar_grey_90"
-        android:text="提交建议"
+        android:text="@string/advice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

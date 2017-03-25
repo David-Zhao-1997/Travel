@@ -3,24 +3,22 @@ package com.example.administrator.travel;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
+import android.content.CursorLoader;
 import android.content.Intent;
+import android.content.Loader;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.app.LoaderManager.LoaderCallbacks;
-
-import android.content.CursorLoader;
-import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -37,9 +35,7 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.IOException;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -371,7 +367,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             try
             {
                 // Simulate network access.
-                Socket socket = new Socket("www.davidzhao.cn", 10000);
+                Socket socket = new Socket("192.168.0.153", 10000);
                 DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
                 XStream xStream = new XStream(new DomDriver());
                 String s = xStream.toXML(new LoginRequest(mEmail, mPassword));

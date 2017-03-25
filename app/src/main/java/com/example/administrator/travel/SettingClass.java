@@ -1,7 +1,9 @@
 package com.example.administrator.travel;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,7 +17,11 @@ private Button mSetting_outBtn;
         mSetting_outBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                SharedPreferences sharedPreferences = getSharedPreferences("user_config", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("username", "");
+                editor.commit();
+                finish();
             }
         });
     }

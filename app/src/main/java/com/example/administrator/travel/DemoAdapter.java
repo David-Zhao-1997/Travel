@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -30,6 +31,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
     private ArrayList<String> dataList = new ArrayList<>();
     private Resources res;
     private static int i = 0;
+    private TextView IVtext;
 
     public void replaceAll(ArrayList<String> list)
     {
@@ -91,6 +93,7 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
             manager.getDefaultDisplay().getMetrics(dm);
             int width = dm.widthPixels;
             int height = dm.heightPixels;
+            IVtext = (TextView) view.findViewById(R.id.ivText);
 //            int width = context.getWindowManager().getDefaultDisplay().getWidth();
 //            int width = 1440;//TODO 修改
             ViewGroup.LayoutParams params = ivImage.getLayoutParams();
@@ -129,6 +132,52 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.BaseViewHolder
                 Glide.with(itemView.getContext()).load(text).diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.mipmap.ic_launcher).crossFade().into(ivImage);
                 System.out.println(text);
 //                ivText.setOnClickListener(new clikListener(text));
+                String str = "null";
+                switch (text)
+                {
+//                   "http://www.davidzhao.cn/pic/badaguan-win.png"
+//                   "http://www.davidzhao.cn/pic/fangte-win.png"
+//                   "http://www.davidzhao.cn/pic/haijun-win.png"
+//                   "http://www.davidzhao.cn/pic/jianyu-win.png"
+//                   "http://www.davidzhao.cn/pic/liuqinghe-win.png"
+//                   "http://www.davidzhao.cn/pic/pichaiyuan-win.png"
+//                   "http://www.davidzhao.cn/pic/shilaoren-win.png"
+//                   "http://www.davidzhao.cn/pic/xiaoyushan-win.png"
+//                   "http://www.davidzhao.cn/pic/zhanqiao-win.png"
+//                   "http://www.davidzhao.cn/pic/zhongshan-win.png"
+                    case "http://192.168.0.153/pic/badaguan-win.png":
+                        str = "八大关";
+                        break;
+                    case "http://192.168.0.153/pic/fangte-win.png":
+                        str = "方特梦幻王国";
+                        break;
+                    case "http://192.168.0.153/pic/haijun-win.png":
+                        str = "海军博物馆";
+                        break;
+                    case "http://192.168.0.153/pic/jianyu-win.png":
+                        str = "德国监狱遗址";
+                        break;
+                    case "http://192.168.0.153/pic/liuqinghe-win.png":
+                        str = "流清河";
+                        break;
+                    case "http://192.168.0.153/pic/pichaiyuan-win.png":
+                        str = "劈柴院";
+                        break;
+                    case "http://192.168.0.153/pic/shilaoren-win.png":
+                        str = "石老人";
+                        break;
+                    case "http://192.168.0.153/pic/xiaoyushan-win.png":
+                        str = "小鱼山";
+                        break;
+                    case "http://192.168.0.153/pic/zhanqiao-win.png":
+                        str = "栈桥";
+                        break;
+                    case "http://192.168.0.153/pic/zhongshan-win.png":
+                        str = "中山公园";
+                        break;
+                }
+                IVtext.setText(str);
+
                 //TODO 这里需要重新设置监听器
                 ok.setOnClickListener(new View.OnClickListener()
                 {

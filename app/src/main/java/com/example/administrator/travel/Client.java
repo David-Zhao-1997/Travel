@@ -11,7 +11,7 @@ import java.net.Socket;
 public class Client extends Socket
 {
 
-    	private static final String SERVER_IP = "118.89.238.39"; // ?????IP
+    private static final String SERVER_IP = "192.168.0.153"; // ?????IP
 //    private static final String SERVER_IP = "192.168.43.44"; // ?????IP
     private static final int SERVER_PORT = 8899; // ???????
 

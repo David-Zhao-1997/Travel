@@ -4,11 +4,9 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -29,7 +27,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -366,7 +363,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             try
             {
                 // Simulate network access.
-                Socket socket = new Socket("192.168.43.44", 10000);
+                Socket socket = new Socket("192.168.0.153", 10000);
                 DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
                 XStream xStream = new XStream(new DomDriver());
                 String s = xStream.toXML(new RegisterRequest(mEmail, mPassword));

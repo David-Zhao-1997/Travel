@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -107,7 +106,7 @@ public class RemarkListAdapter extends BaseAdapter
             URL myFileURL = null;
             try
             {
-                myFileURL = new URL("http://www.davidzhao.cn/icon/" + remarkItem.userName + "_icon.png");
+                myFileURL = new URL("http://192.168.0.153/icon/" + remarkItem.userName + "_icon.png");
                 //获得连接
                 HttpURLConnection conn = null;
                 conn = (HttpURLConnection) myFileURL.openConnection();

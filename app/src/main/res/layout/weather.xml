@@ -22,7 +22,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="right|top"
-            android:text="查询天气">
+            android:text="@string/Seach">
         </Button>
     </LinearLayout>
 

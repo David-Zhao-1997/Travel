@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="@dimen/normal_space"
-            android:text="我的"
+            android:text="@string/Mine"
             android:textColor="#000"
             android:textSize="@dimen/title_text_size" />
 
@@ -25,7 +25,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:text="联系客服"
+            android:text="@string/ContactUs"
             android:textColor="@color/normal_orange" />
 
         <FrameLayout
@@ -97,7 +97,7 @@
             android:layout_alignParentTop="true"
             android:layout_weight="1"
             android:background="#FFE3E3E3"
-            android:text="景点"
+            android:text="@string/spot"
             android:src="@drawable/home"
             android:textColor="#515658"
             android:textSize="18sp"/>
@@ -110,7 +110,7 @@
             android:layout_alignParentTop="true"
             android:layout_weight="1"
             android:background="#FFE3E3E3"
-            android:text="足迹"
+            android:text="@string/footstep"
             android:textColor="#515658"
             android:src="@drawable/foot"
             android:textSize="18sp"/>
@@ -123,7 +123,7 @@
             android:layout_alignParentTop="true"
             android:layout_weight="1"
             android:background="#FFE3E3E3"
-            android:text="个人中心"
+            android:text="@string/Me"
             android:src="@drawable/personal"
             android:textColor="#515658"
             android:textSize="18sp"/>
