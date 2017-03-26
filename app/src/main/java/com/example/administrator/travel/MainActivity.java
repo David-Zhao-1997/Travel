@@ -187,7 +187,14 @@ public class MainActivity extends AppCompatActivity
     protected void onDestroy()
     {
         super.onDestroy();
-        unregisterReceiver(receiver);
+        try
+        {
+            unregisterReceiver(receiver);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         Intent intent = new Intent(MainActivity.this, MyService.class);
         stopService(intent);
     }
@@ -513,7 +520,11 @@ public class MainActivity extends AppCompatActivity
                         @Override
                         public void onClick(View v)
                         {
-                            Intent mIntent = new Intent(MainActivity.this, LoginActivity.class);
+                            unregisterReceiver(receiver);
+                            Intent intent1 = new Intent(MainActivity.this, MyService.class);
+                            stopService(intent1);
+                            Intent mIntent = new Intent(MainActivity.this, Login.class);
+                            finish();
                             startActivity(mIntent);
                             //从这里写登录代码
                         }
@@ -762,7 +773,7 @@ public class MainActivity extends AppCompatActivity
                 "user_config", Context.MODE_PRIVATE);
         String username = sharedPreferences1.getString("username", null);
         System.out.println("获取成功：" + username);
-        copyFile(oldfile.getAbsolutePath(), oldfile.getParent() + "/" + username + "_"+"icon.png");
+        copyFile(oldfile.getAbsolutePath(), oldfile.getParent() + "/" + username + "_" + "icon.png");
         String Str = oldfile.getParent() + "/" + username + "_" + "icon.png";
         return Str;
     }

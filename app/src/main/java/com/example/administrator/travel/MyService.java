@@ -41,6 +41,21 @@ public class MyService extends Service
     }
 
     @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        try
+        {
+            dos.close();
+            socket.close();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId)
     {
         System.out.println("启动服务");
@@ -57,6 +72,24 @@ public class MyService extends Service
                 System.out.println("socket:" + socket);
                 while (socket == null)
                 {
+                }
+                if (socket.isClosed())
+                {
+                    new Thread(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            try
+                            {
+                                socket = new Socket("192.168.0.153", 10000);
+                            }
+                            catch (IOException e)
+                            {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
                 }
                 dos = new DataOutputStream(socket.getOutputStream());
                 System.out.println("发送请求");
@@ -176,17 +209,17 @@ public class MyService extends Service
                     {
                         GetLikeInfoReply getLikeInfoReply = (GetLikeInfoReply) object;
                         MainActivity.mainActivity.LikeMap = getLikeInfoReply.hashMap;
-                        System.out.println("likeMap:"+MainActivity.mainActivity.LikeMap);
+                        System.out.println("likeMap:" + MainActivity.mainActivity.LikeMap);
                         PicInfo picInfo = MainActivity.mainActivity.LikeMap.get("shilaoren-win.png");
-                        System.out.println("likeNum:"+picInfo.likeNum);
-                        System.out.println("flag:"+picInfo.flag);
+                        System.out.println("likeNum:" + picInfo.likeNum);
+                        System.out.println("flag:" + picInfo.flag);
                     }
-                    else if(object instanceof GetRemarkReply)
+                    else if (object instanceof GetRemarkReply)
                     {
                         System.out.println("接收到评论回复");
                         GetRemarkReply getRemarkReply = (GetRemarkReply) object;
                         MainActivity.mainActivity.remarkItems = getRemarkReply.remarkList;
-                        System.out.println("赋值成功:"+MainActivity.mainActivity.remarkItems);
+                        System.out.println("赋值成功:" + MainActivity.mainActivity.remarkItems);
                     }
                     else
                     {

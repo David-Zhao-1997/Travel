@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.example.administrator.travel.CacheUtil;
 import com.example.administrator.travel.GetRemarkRequest;
 import com.example.administrator.travel.MainActivity;
 import com.example.administrator.travel.MyService;
@@ -134,6 +135,10 @@ public class MainIntoActivity2 extends AppCompatActivity
         NetService netService = new NetService(url);
         netService.start();
         Bitmap bitmap;
+        if ((bitmap = CacheUtil.getBitmapCache(url)) != null)
+        {
+            view.setImageBitmap(bitmap);
+        }
         while ((bitmap = netService.getBitmap()) == null)
         {
 //            try
@@ -146,6 +151,8 @@ public class MainIntoActivity2 extends AppCompatActivity
 //            }
         }
         view.setImageBitmap(bitmap);
+        CacheUtil cacheUtil = new CacheUtil();
+        cacheUtil.setBitmapCache(url, bitmap);
     }
 
     class ObjectSender extends Thread
@@ -238,7 +245,7 @@ public class MainIntoActivity2 extends AppCompatActivity
             //连接设置获得数据流
             conn.setDoInput(true);
             //不使用缓存
-            conn.setUseCaches(false);
+            conn.setUseCaches(true);
             //这句可有可无，没有影响
             //conn.connect();
             //得到数据流

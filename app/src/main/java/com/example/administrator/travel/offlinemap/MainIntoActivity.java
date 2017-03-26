@@ -3,12 +3,10 @@ package com.example.administrator.travel.offlinemap;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,8 +16,7 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.maps.LocationSource;
-import com.amap.api.maps.model.Text;
-import com.example.administrator.travel.NaviActivity;
+import com.example.administrator.travel.CacheUtil;
 import com.example.administrator.travel.R;
 import com.example.administrator.travel.RestRouteShowActivity;
 
@@ -63,9 +60,12 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
             {
                 //                Intent mIntent = new Intent(MainIntoActivity.this, NaviActivity.class);
 //                startActivity(mIntent);
-                if (myLastLocation != null) {
+                if (myLastLocation != null)
+                {
                     navijudge();
-                } else {
+                }
+                else
+                {
                     System.out.println("错误");
                 }
             }
@@ -108,8 +108,14 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
         NetService netService = new NetService(url);
         netService.start();
         Bitmap bitmap;
-        while ((bitmap = netService.getBitmap()) == null)
+        if ((bitmap = CacheUtil.getBitmapCache(url)) != null)
         {
+            view.setImageBitmap(bitmap);
+        }
+        else
+        {
+            while ((bitmap = netService.getBitmap()) == null)
+            {
 //            try
 //            {
 //                Thread.sleep(50);
@@ -118,8 +124,11 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
 //            {
 //                e.printStackTrace();
 //            }
+            }
+            view.setImageBitmap(bitmap);
+            CacheUtil cacheUtil = new CacheUtil();
+            cacheUtil.setBitmapCache(url, bitmap);
         }
-        view.setImageBitmap(bitmap);
     }
 
     class DesFetch extends Thread
@@ -182,7 +191,8 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * @author hongming.wang
      * @since 2.8.0
      */
-    private void initLocation() {
+    private void initLocation()
+    {
         //初始化client
         mlocationClient = new AMapLocationClient(this.getApplicationContext());
         //设置定位参数
@@ -198,14 +208,16 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * @modify han yuanfeng
      * @since 2.8.0
      */
-    private void startLocation() {
+    private void startLocation()
+    {
         // 设置定位参数
         mlocationClient.setLocationOption(mLocationOption);
         // 启动定位
         mlocationClient.startLocation();
     }
 
-    private void navijudge() {
+    private void navijudge()
+    {
         Intent intent = new Intent(MainIntoActivity.this, RestRouteShowActivity.class);
         Bundle bundle = new Bundle();
         bundle.putDouble("startLocation_latitude", myLastLocation.getLatitude());
@@ -225,7 +237,8 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * @modify han yuanfeng
      * @since 2.8.0
      */
-    private AMapLocationClientOption getDefaultOption() {
+    private AMapLocationClientOption getDefaultOption()
+    {
         AMapLocationClientOption mOption = new AMapLocationClientOption();
         mOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);//可选，设置定位模式，可选的模式有高精度、仅设备、仅网络。默认为高精度模式
         mOption.setGpsFirst(true);//可选，设置是否gps优先，只在高精度模式下有效。默认关闭
@@ -245,8 +258,10 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * 激活定位
      */
     @Override
-    public void activate(LocationSource.OnLocationChangedListener listener) {
-        if (mlocationClient == null) {
+    public void activate(LocationSource.OnLocationChangedListener listener)
+    {
+        if (mlocationClient == null)
+        {
             mlocationClient = new AMapLocationClient(this);
             mLocationOption = getDefaultOption();
             //设置定位监听
@@ -267,15 +282,21 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
     /**
      * 定位监听
      */
-    AMapLocationListener locationListener = new AMapLocationListener() {
+    AMapLocationListener locationListener = new AMapLocationListener()
+    {
         @Override
-        public void onLocationChanged(AMapLocation amapLocation) {
-            if (amapLocation != null) {
+        public void onLocationChanged(AMapLocation amapLocation)
+        {
+            if (amapLocation != null)
+            {
                 if (amapLocation != null
-                        && amapLocation.getErrorCode() == 0) {
+                        && amapLocation.getErrorCode() == 0)
+                {
                     myLastLocation = amapLocation;
                 }
-            } else {
+            }
+            else
+            {
                 String errText = "定位失败,请检查网络或者GPS定位功能是否打开";
                 Log.e("AmapErr", errText);
             }
@@ -286,7 +307,8 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * 方法必须重写
      */
     @Override
-    protected void onResume() {
+    protected void onResume()
+    {
         super.onResume();
         mlocationClient = new AMapLocationClient(this);
         mLocationOption = getDefaultOption();
@@ -296,7 +318,8 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * 方法必须重写
      */
     @Override
-    protected void onPause() {
+    protected void onPause()
+    {
         super.onPause();
         deactivate();
 
@@ -306,12 +329,14 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * 方法必须重写
      */
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState)
+    {
         super.onSaveInstanceState(outState);
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
         super.onRestoreInstanceState(savedInstanceState);
     }
 
@@ -319,9 +344,11 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * 方法必须重写
      */
     @Override
-    protected void onDestroy() {
+    protected void onDestroy()
+    {
         super.onDestroy();
-        if (null != mlocationClient) {
+        if (null != mlocationClient)
+        {
             mlocationClient.onDestroy();
         }
     }
@@ -330,8 +357,10 @@ public class MainIntoActivity extends AppCompatActivity implements LocationSourc
      * 停止定位
      */
     @Override
-    public void deactivate() {
-        if (mlocationClient != null) {
+    public void deactivate()
+    {
+        if (mlocationClient != null)
+        {
             mlocationClient.stopLocation();
             mlocationClient.onDestroy();
         }
@@ -417,4 +446,5 @@ class NetService extends Thread
         return bitmap;
 
     }
+
 }

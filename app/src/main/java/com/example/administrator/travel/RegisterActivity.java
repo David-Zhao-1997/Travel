@@ -66,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private Socket socket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -363,7 +364,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             try
             {
                 // Simulate network access.
-                Socket socket = new Socket("192.168.0.153", 10000);
+                socket = new Socket("192.168.0.153", 10000);
                 DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
                 XStream xStream = new XStream(new DomDriver());
                 String s = xStream.toXML(new RegisterRequest(mEmail, mPassword));
@@ -381,10 +382,16 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                     {
                         System.out.println(getString(R.string.register_success));
                         System.out.println("准备调用");
-                        Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                        socket.close();
+//                        Intent intent = new Intent(RegisterActivity.this,Login.class);
+//                        finish();
+//                        startActivity(intent);
+//                        System.out.println("调用完成");
+                        final Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-                        System.out.println("调用完成");
-                        return true;
+                        System.exit(0);
+//                        return true;
 
 
                     }
@@ -392,7 +399,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
                     {
                         System.out.println(getString(R.string.register_fail));
 //                        Toast.makeText(RegisterActivity.this, getString(R.string.register_fail), Toast.LENGTH_SHORT).show();
-                        return false;
+//                        return false;
                     }
                 }
 
@@ -404,7 +411,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             catch (Exception e)
             {
                 e.printStackTrace();
-                return false;
+//                return false;
             }
 
 
@@ -420,7 +427,7 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
 
             // TODO: register the new account here.
 //            return true;
-            return false;
+            return true;
         }
 
         @Override
@@ -446,6 +453,9 @@ public class RegisterActivity extends AppCompatActivity implements LoaderCallbac
             mAuthTask = null;
             showProgress(false);
         }
+
     }
+
+
 }
 
