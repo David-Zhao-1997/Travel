@@ -27,12 +27,6 @@ public class Client extends Socket
 
     private DataOutputStream dos;
 
-    /**
-     * ??????<br/>
-     * ???????????????
-     *
-     * @throws Exception
-     */
     public Client() throws Exception
     {
         super(SERVER_IP, SERVER_PORT);
@@ -116,14 +110,11 @@ public class Client extends Socket
                 fis = new FileInputStream(tmp_file);
                 dos = new DataOutputStream(client.getOutputStream());
 
-                // ??????????
                 dos.writeUTF(file.getName());
                 dos.flush();
                 dos.writeLong(file.length());
                 dos.flush();
 
-                // ??????????
-                System.out.println("======== ??????? ========");
                 byte[] bytes = new byte[1024];
                 int length = 0;
                 long progress = 0;
@@ -135,7 +126,6 @@ public class Client extends Socket
                     System.out.print("| " + (100 * progress / file.length()) + "% |\n");
                 }
                 System.out.println();
-                System.out.println("======== ??????? ========");
 //                tmp_file.delete();
             }
         }
